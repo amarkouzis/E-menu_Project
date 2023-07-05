@@ -1,0 +1,1814 @@
+<!-- The code belongs to -->
+<!-- Markouzis Alexandros -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SKETCH MENU</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css?ver=1.1"> 
+        <script src="https://kit.fontawesome.com/fc00b2ffd8.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+        <script type="text/javascript">
+        var arrLang = {
+            'en' : {
+                'apple' : ' Apple ',
+                'banana' : ' Banana ',
+                'beer' : ' Beers ',
+                'beverages' : ' Beverages ',
+                'bitter' : ' Bitter ',
+                'blood' : ' Blood Orange ',
+                'bottle' : ' Bottle ',
+                'blonde' : ' Blonde ',
+                'blue' : ' Orange (Blue) ',
+                'caramel' : ' Caramel ',
+                'ceylan' : ' Ceylan ',
+                'chamomile' : ' Chamomile  ',
+                'champagne' : ' Champagne ',
+                'cheese' : ' Cheese ',
+                'cheese_meat' : ' Cheese & Meat ',
+                'chocolate' : ' Chocolate ',
+                'chocolate_b' : ' Hot & Iced Chocolate ',
+                'chocolate_pie' : ' Chocolate Pie ',
+                'cocktail_1' : ' Cotton candy, strawberry syrup, sparkling water ',
+                'cocktail_2' : ' Fresh pineapple, coconut milk ',
+                'cocktail_3' : ' Passion fruit, cranberry, fresh lemon juice, soda ',
+                'cocoa' : ' Cocoa  ',
+                'coffee' : ' Coffee ',
+                'coconut' : ' Coconut ',
+                'cookies' : ' Cookies ',
+                'classic' : ' Classic ',
+                'cranberry' : ' Cranberry (White) ',
+                'cranberry_j' : ' Cranberry ',
+                'dark' : ' Dark ',
+                'desserts' : ' Desserts ',
+                'double' : ' Double ',
+                'draught' : ' Draught ', 
+                'drinks' : ' Drinks ',
+                'dry' : ' Dry ',
+                'eroxos_v' : 'Type: Mavroudi, Merlot ',
+                'portes_v' : 'Type: Merlot ',
+                'kgero1_v' : 'Type: Limnio, Mavroudi, Mavrotragano ',
+                'biblia_v' : 'Type: Cabernet Sauvignon, Merlot, Agiorgitiko ',
+                'hit_r_v' : 'Type: Limniona, Cabernet Sauvignon ',
+                'beau_v' : 'Type: Fresh French wine ',
+                'naut_v' : 'Type: Granach Rouge, Agiorgitiko, Syrah ',
+                'apo_v' : 'Type: Mavro Mesenikola ',
+                'kyra_v' : 'Type: Roditis ',
+                'karg_v' : 'Type: Malagouzia ',
+                'kgero2_v' : 'Type: Malagouzia, Assirtiko ',
+                'kkar_v' : 'Type: Sauvignon Blanc ',
+                'biblia_w_v' : 'Type: Assirtiko, Sauvignon Blanc ',
+                'syrah' : 'Type: Syrah',
+                'hit_w_v' : 'Type: Chardonnay, Limniona ',
+                'ops_v' : 'Type: Moschoudi ',
+                'kgero3_v' : 'Type: Chardonnay ',
+                'muscat' : 'Type: Muscat',
+                'filter' : ' Filter ',
+                'flavors' : ' Flavors ',
+                'flora' : ' Pasta Flora (apple / cherry) ',
+                'free' : ' Alcohol Free ',
+                'fruitlato' : ' Fruitlato ',
+                'food' : ' Food ',
+                'gazoza' : ' Gazoza ',
+                'glass' : ' Glass ',
+                'grape' : ' Grape ',
+                'grapefruit' : ' Grapefruit Soda  ',
+                'greek' : ' Greek ',
+                'green' : ' Green ',
+                'hazelnut' : ' Hazelnut ',
+                'homemade' : ' Homemade ',
+                'hot_tea' : ' Hot Tea ',
+                'hot_wine' : ' Hot Wine ',
+                'ice_cream' : ' Ice Cream ',
+                'iced_tea' : ' Iced Tea ',
+                'ioli' : ' Ioli (mineral water) 500ml ',
+                'juices' : ' Juices ',
+                'kebab' : ' Kebab ',
+                'kebab_sausage' : ' Kebab & Sausage ',
+                'lcj' : ' Lemonade & Cucumber Juice ',
+                'lcc' : ' Lemonade with Chios mastic ',
+                'lsg' : ' Lemonade with Stevia & Ginger ',
+                'lemon' : ' Lemon ',
+                'lemonade' : ' Lemonade ',
+                'mastic' : ' Mastic (White) ',
+                'meat' : ' Meat ',
+                'melon' : ' Melon ',
+                'methods' : ' Methods ',
+                'mint' : ' Mint ',
+                'mixed' : ' Mixed ',
+                'mountain' : ' Mountain ',
+                'natural_juices' : ' Natural Juices ',
+                'normal' : ' Normal ',
+                'omelette_sandwich' : ' Omelette Sandwich ',
+                'orange' : ' Orange ',
+                'orange_pie' : ' Orange Pie ',
+                'peach' : ' Peach ',
+                'pineapple' : ' Pineapple ',
+                'platters' : ' Platters ',
+                'plo' : ' Pomegranate & Lemon Juice ',
+                'quince' : ' Quince ',
+                'red' : ' Red ',
+                'red_beer' : ' Red Beer ',
+                'red_tea' : ' 4 Red Fruits ',
+                'rosé' : ' Rosé ',
+                'sclj' : ' Sour Cherry & Lemon Juice ',
+                'sausage' : ' Sausage ',
+                'semi_dry' : ' Semi-Dry ',
+                'semi_sweet' : ' Semi-Sweet ',
+                'soft_drinks' : ' Soft Drinks ',
+                'soft_drinks_juices' : ' Juices & Soft Drinks ',
+                'soda' : ' Soda ',
+                'souffle' : ' Chocolate Souffle ',
+                'sour' : ' Sour Cherry ',
+                'spicy' : ' Spicy ',
+                'spoon' : ' Spoon Sweets ',
+                'strawberry' : ' Strawberry ',
+                'sweet' : ' Sweet ',
+                'tart' : ' Lemon Tart ',
+                'tea' : ' Tea ',
+                'toast' : ' Toast ',
+                'tyropitari' : ' Tyropitari ',
+                'tiganopsomo' : ' Tiganopsomo ',
+                'vanilla' : ' Vanilla ',
+                'vegan' : ' with almond milk ',
+                'viennois' : ' Viennois ',
+                'vromiko' : ' Vromiko ',
+                'watermelon' : ' Watermelon ',
+                'white' : ' White ',
+                'white_chocolate' : ' White ',
+                'wine' : ' Wines ',
+                'wt' : ' Water Ice ',
+                'american' : 'Scrambled eggs with cheddar and smoked ham on toasted German rye bread. Served with bacon, cocktail sausages and a touch of homemade mayonnaise.',
+                'english' : 'Fried eggs with cheddar, bacon, cocktail sausages, toasted German bread with sourdough and a touch of mustard and ketchup.',
+                'gm' : 'Omelette stuffed with cheddar and smoked ham or turkey. Served with bacon, cocktail sausages, toasted German bread with sourdough and a touch of homemade mayonnaise.',
+                'mm' : 'Fried potatoes and on top of them, fried eggs, cheddar and bacon. Served with toasted German multigrain bread and a touch of ketchup and homemade mayonnaise.',
+                'pp' : 'Baked rustic sausage cut into slices with scrambled eggs, cheddar and smoked ham. Served with bacon, toasted German Dinkel bread and a touch of mustard and homemade mayonnaise.',
+                'tyr' : 'Served with thyme honey and white and black sesame.',
+                'tig' : 'Served with thyme honey and white and black sesame.',
+                'cs' : 'Wheat or wholemeal bread, gouda or low-fat cheese, smoked ham or turkey, bacon, tomato and homemade mayonnaise. Served with french fries and ketchup.',
+                'cmd' : 'Two buttered slices of baked German bread with sourdough, smeared with homemade mayonnaise, with cheddar and smoked ham or turkey inside and a fried egg on top. Served with a touch of homemade mayonnaise.',
+                'cms' : 'Two buttered slices of baked German bread with sourdough, smeared with homemade mayonnaise, with cheddar and smoked ham or turkey inside and a small omelette on top. Served with a touch of homemade mayonnaise.',
+                'dog' : 'Sandwich bread, large frankfurter, caramelized onions, mustard and bbq sauce. Served with french fries and ketchup.',
+                'cristo' : 'Three slices of wheat or wholemeal bread dipped in a mixture of egg and milk or skim milk, baked in butter and smeared with homemade mayonnaise. They contain cheddar or low-fat cheese, smoked ham or turkey. Served with a small omelette wrapped in bacon and a touch of homemade mayonnaise.',
+                'tst' : 'Wheat or wholemeal bread, smoked ham or turkey, gouda or low-fat cheese. Served with chips.',
+                'dirty' : 'Sandwich bread that contains double gouda, double smoked ham, bacon, air salami, tomato, chips, tartar sauce and is baked with butter.',
+                'osand' : 'Two slices of wheat or wholemeal bread, dipped in egg mixture, baked in butter and placed in the center of an omelette. Fold and bake on both sides. Contains cheddar, smoked ham or turkey and bacon. Served with french fries and homemade mayonnaise.',
+                'cb' : 'Brioche bread, beef burger, caramelized onions, cheddar, tomato, bacon, tartar sauce, mustard and bbq sauce. Served with french fries and ketchup.',
+                'chb' : 'Brioche bread, homemade chicken burger, caramelized onions, cheddar, tomato, bacon, tartar sauce, mustard and bbq sauce. Served with french fries and ketchup.',
+                'vb' : 'Brioche bread, vegetable burger, caramelized onions, pickle cucumber, tomato, olive pate, ketchup and bbq sauce. Served with french fries and ketchup.',
+                'veb' : 'Brioche bread, vegetable burger, caramelized onions, cheddar, tomato, mustard, homemade mayonnaise and bbq sauce. Served with french fries and ketchup.',
+                'cheese_p' : 'Fine cheeses served with chutney jam and toasted German bread with sourdough.',
+                'meat_p' : 'Fine cold cuts accompanied by olive pate and toasted German Dinkel bread.',
+                'cheese_meat_p' : 'Fine cheeses and cold cuts accompanied by olive pate, chutney jam and toasted German bread with sourdough.',
+                'kebab_p' : 'Kebabs of Thessaloniki with french fries, caramelized onions, toasted German multigrain bread and tartar sauce.',
+                'saus_p' : 'Fine sausages with french fries, caramelized onions, toasted German Dinkel bread and bbq sauce.',
+                'kebab_saus_p' : 'Fine sausages and kebabs from Thessaloniki with french fries, caramelized onions, toasted German bread with sourdough, tartar sauce and bbq sauce.',
+                'hf' : 'Honey, nuts, raisins, banana and maple syrup. Served with red fruit jam.',
+                'cf' : 'Hazelnut praline, grated biscuit, chocolate flakes, banana, cranberry and chocolate ganache.',
+                'pf' : 'Peanut butter, raisins, banana and maple syrup. Served with yellow fruit jam.',
+                'frtst' : 'Four slices of brioche bread dipped in egg mixture and baked with butter. With honey or jam or peanut butter, cinnamon, powdered sugar, maple syrup, cranberries, raisins and nuts.',
+                'extra' : 'Extra: Fried egg +1€',
+                'extrad' : 'Extra: Bacon +0.50€',
+                'ntakos' : ' Dakos ',
+                'potatoes' : ' French Fries ',
+                'ntakosd' : 'Barley nut, tomato, grated feta, extra virgin olive oil and wild oregano. Served with olives.',
+                'potatoesd' : 'French fries with tartar sauce or bbq sauce.',
+                'half': 'All platters can be sold in half quantity.',
+                'summeronly': ' * Summer only!',
+                'carcadet' :' Dried rose blossoms, orange peel, hibiscus blossoms, apple pieces, flower petals and orange essential oil.',
+                'winteronly': ' * Christmas only! 20 November - 20 January',
+                'ask' : ' * In consultation with the service.',
+                'izzi': ' Ioli Fizzy (sparkling water) ',
+                'aqua' : ' Aqua Panna (mineral water) 750ml ',
+                'pelegrino' : ' Pelegrino (sparkling water) ',
+                'winter' : ' * Only Winter! ',
+                'egg' : 'egg white.',
+                'vanillas' : 'Vanilla (sour cherry) ',
+                'salted' : 'Chocolanelle Salted Caramel ',
+                'away' : 'All cocktails are also available at TAKE AWAY 5€ '
+                
+            },
+            'gr' : {
+                'apple' : ' Μήλο ',
+                'banana' : ' Μπανάνα ',
+                'beer' : ' Μπύρες ',
+                'beverages' : ' Ροφήματα ',
+                'bitter' : ' Πικρή ',
+                'blood' : ' Σαγκουίνι ',
+                'bottle' : ' Μπουκάλι ',
+                'blonde' : ' Ξανθιές ',
+                'blue' : ' Πορτοκαλάδα ',
+                'caramel' : ' Καραμέλα ',
+                'ceylan' : ' Κεϋλάνης ',
+                'chamomile' : ' Χαμομήλι ',
+                'champagne' : ' Σαμπανιζέ ',
+                'cheese' : ' Τυριά ',
+                'cheese_meat' : ' Τυριά & Αλλαντικά ',
+                'chocolate' : ' Σοκολάτα ',
+                'chocolate_b' : ' Ζεστές & Κρύες Σοκολάτες  ',
+                'chocolate_pie' : ' Σοκολατόπιτα ',
+                'cocktail_1' : ' Μαλλί της γριάς, σιρόπι φράουλα, ανθρακούχο νερό ',
+                'cocktail_2' : ' Φρέσκος ανανάς, γάλα καρύδας ',
+                'cocktail_3' : ' Passion fruit, κράνμπερι, φρέσκος χυμός λεμόνι, σόδα ',
+                'cocoa' : ' Κακάο ',
+                'coconut' : ' Καρίδα ',
+                'cookies' : ' Μπισκότο ',
+                'coffee' : ' Καφέδες ',
+                'classic' : ' Κλασική ',
+                'cranberry' : ' Κράνμπερι (Λευκή) ',
+                'cranberry_j' : ' Κράνμπερι ',
+                'dark' : ' Μαύρες ',
+                'desserts' : ' Γλυκά ',
+                'double' : ' Διπλός ',
+                'draught' : ' Βαρελίσια ', 
+                'drinks' : ' Ποτά ',
+                'dry' : ' Ξηρά ',
+                'eroxos_v' : 'Ποικιλία: Μαυρούδι Αραχώβης, Merlot ',
+                'portes_v' : 'Ποικιλία: Merlot ',
+                'kgero1_v' : 'Ποικιλία: Λημνιό, Μαυρούδι, Μαυροτράγανο ',
+                'biblia_v' : 'Ποικιλία: Cabernet Sauvignon, Merlot, Αγιωργίτικο ',
+                'hit_r_v' : 'Ποικιλία: Λημνιώνα, Cabernet Sauvignon ',
+                'beau_v' : 'Ποικιλία: Φρέσκος Γαλλικός οίνος ',
+                'naut_v' : 'Ποικιλία: Granach Rouge, Αγιωργίτικο, Syrah ',
+                'apo_v' : 'Ποικιλία: Μαύρο Μεσενικόλα ',
+                'kyra_v' : 'Ποικιλία: Ροδίτης ',
+                'karg_v' : 'Ποικιλία: Μαλαγουζιά ',
+                'kgero2_v' : 'Ποικιλία: Μαλαγουζιά, Ασσύρτικο ',
+                'kkar_v' : 'Ποικιλία: Sauvignon Blanc ',
+                'biblia_w_v' : 'Ποικιλία: Ασσύρτικο, Sauvignon Blanc ',
+                'syrah' : 'Ποικιλία: Syrah',
+                'hit_w_v' : 'Ποικιλία: Chardonnay, Λημνιώνα ',
+                'ops_v' : 'Ποικιλία: Μοσχούδι ',
+                'kgero3_v' : 'Ποικιλία: Chardonnay ',
+                'muscat' : 'Ποικιλία: Muscat',
+                'filter' : ' Φίλτρου ',
+                'flavors' : ' Γεύσεις ',
+                'flora' : ' Πάστα Φλώρα (μήλο ή κεράσι) ',
+                'free' : ' Χωρίς Αλκοόλ ',
+                'fruitlato' : ' Φρουλάτο ',
+                'food' : ' Φαγητό ',
+                'glass' : ' Ποτήρι ',
+                'grape' : ' Σταφύλι ',
+                'grapefruit' : ' Γκρέιπφρουτ Σόδα ',
+                'greek' : ' Ελληνικός ',
+                'green' : ' Πράσινο ',
+                'hazelnut' : ' Φουντούκι ',
+                'homemade' : ' Σπιτικό ',
+                'hot_tea' : ' Ζεστά Τσάι ',
+                'hot_wine' : ' Ζεστό Κρασί ',
+                'ice_cream' : ' Παγωτά ',
+                'iced_tea' : ' Κρύα Τσάι ',
+                'ioli' : ' Ιόλη (μεταλλικό νερό) 500ml ',
+                'juices' : ' Χυμοί ',
+                'kebab' : ' Κεμπαπάκια ',
+                'kebab_sausage' : ' Κεμπαπάκια & Λουκάνικα ',
+                'lcj' : ' Λεμονάδα με χυμό Αγγούρι ',
+                'lcc' : ' Λεμονάδα με μαστίχα Χίου ',
+                'lsg' : ' Λεμονάδα με Στέβια & Πιπερόριζα ',
+                'lemon' : ' Λεμόνι ',
+                'lemonade' : ' Λεμονάδα ',
+                'liqueur' : ' Λικέρ ',
+                'mastic' : ' Μαστίχα (Λευκή) ',
+                'meat' : ' Αλλαντικά ',
+                'melon' : ' Πεπόνι ',
+                'methods' : ' Μέθοδοι ',
+                'mint' : ' Μέντα ',
+                'mixed' : ' Ανάμεικτος ',
+                'mountain' : ' Βουνού ',
+                'natural_juices' : ' Φυσικοί Χυμοί ',
+                'normal' : ' Μονός ',
+                'omelette_sandwich' : ' Sandwich Ομελέτας ',
+                'orange' : ' Πορτοκάλι ',
+                'orange_pie' : ' Πορτοκαλόπιτα ',
+                'peach' : ' Ροδάκινο ',
+                'pineapple' : ' Ανανάς ',
+                'platters' : ' Πλαττώ ',
+                'plo' : ' Ρόδι με Χυμό Λεμόνι ',
+                'quince' : ' Κυδώνι ',
+                'red' : ' Κόκκινα ',
+                'red_beer' : ' Κόκκινες ',
+                'red_tea' : ' 4 Κόκκινα Φρούτα ',
+                'rosé' : ' Ροζέ ',
+                'sausage' : ' Λουκάνικα ',
+                'semi_dry' : ' Ημίξηρα ',
+                'semi_sweet' : ' Ημίγλυκα ',
+                'sclj' : ' Βυσινάδα με χυμό Λεμόνι ',
+                'soft_drinks' : ' Αναψυκτικά ',
+                'soft_drinks_juices' : ' Αναψυκτικά & Χυμοί ',
+                'soda' : ' Σόδα ',
+                'souffle' : ' Σουφλέ Σοκολάτας ',
+                'sour' : ' Βύσσινο ',
+                'spicy' : ' Αρωματώδης ',
+                'spoon' : ' Γλυκά του Κουταλιού ',
+                'strawberry' : ' Φράουλα ',
+                'sweet' : ' Γλυκά ',
+                'tart' : ' Τάρτα Λεμόνι ',
+                'tea' : ' Τσάι ',
+                'toast' : ' Τοστ ',
+                'tyropitari' : ' Τυροπιτάρι ',
+                'tiganopsomo' : ' Τηγανόψωμο ',
+                'vanilla' : ' Βανίλια ',
+                'vegan' : ' με γάλα αμυγδάλου ',
+                'viennois' : ' Βιεννουά ',
+                'vromiko' : ' Βρώμικο ',
+                'watermelon' : ' Καρπούζι ',
+                'white' : ' Λευκά ',
+                'white_chocolate' : ' Λευκή ',
+                'wine' : ' Κρασιά ',
+                'wt' : ' Γρανίτες ',
+                'american' : 'Αυγά σκραμπλ με τσένταρ και καπνιστό ζαμπόν, πάνω σε ψημένο γερμανικό ψωμί σίκαλης. Συνοδεύεται με μπέικον, κοκτέιλ λουκάνικα και μια πινελιά σπιτικής μαγιονέζας.',
+                'english' : 'Αυγά μάτια με τσένταρ, μπέικον, λουκάνικα κοκτέιλ, ψημένο γερμανικό ψωμί με προζύμι και μια πινελιά μουστάρδας και κέτσαπ.',
+                'gm' : 'Ομελέτα γεμιστή με τσένταρ και καπνιστό ζαμπόν ή γαλοπούλα. Συνοδεύεται με μπέικον, κοκτέιλ λουκάνικα, ψημένο γερμανικό ψωμί με προζύμι και μια πινελιά σπιτικής μαγιονέζας.',
+                'mm' : 'Τηγανητές πατάτες και από πάνω τους, τηγανιτά αυγά, τσένταρ και μπέικον.  Συνοδεύεται με ψημένο γερμανικό ψωμί πολύσπορο και μια πινελιά κέτσαπ και σπιτικής μαγιονέζας.',
+                'pp' : 'Ψημένο λουκάνικο χωριάτικο κομμένο σε ροδέλες μαζί με αυγά σκραμπλ , τσένταρ και καπνιστό ζαμπόν. Συνοδεύεται με μπέικον, ψημένο γερμανικό ψωμί Dinkel και μια πινελιά μουστάρδας και σπιτικής μαγιονέζας.',
+                'tyr' : 'Σερβίρεται με θυμαρίσιο μέλι και σουσάμι λευκό και μαύρο.',
+                'tig' : 'Σερβίρεται με θυμαρίσιο μέλι και σουσάμι λευκό και μαύρο.',
+                'cs' : 'Ψωμί σταρένιο ή ολικής άλεσης, γκούντα ή τυρί με χαμηλά λιπαρά,  καπνιστό ζαμπόν ή γαλοπούλα, μπέικον, ντομάτα και σπιτική μαγιονέζα. Συνοδεύεται με τηγανιτές πατάτες και κέτσαπ.',
+                'cmd' : 'Δύο βουτυρομένες φέτες ψημένο γερμανικό ψωμί με προζύμι, αλειμμένες με σπιτική μαγιονέζα, μέσα τους τσένταρ και καπνιστό ζαμπόν ή γαλοπούλα και απο πάνω τους ένα αυγό τηγανιτό. Συνοδεύεται με μια πινελιά σπιτικής μαγιονέζας.',
+                'cms' : 'Δύο βουτυρομένες φέτες ψημένο γερμανικό ψωμί με προζύμι, αλειμμένες με σπιτική μαγιονέζα, μέσα τους τσένταρ και καπνιστό ζαμπόν ή γαλοπούλα και απο πάνω τους μια μικρή ομελέτα. Συνοδεύεται με μια πινελιά σπιτικής μαγιονέζας.',
+                'dog' : 'Ψωμί για sandwich, μεγάλο λουκάνικο φρανκφούρτης, καραμελωμένα κρεμμύδια, μουστάρδα και σως bbq. Συνοδεύεται με τηγανιτές πατάτες και κέτσαπ.',
+                'cristo' : 'Τρεις φέτες ψωμί σταρένιο ή ολικής άλεσης βουτηγμένες σε μίγμα αυγού και γάλακτος ή άπαχου γάλακτος, ψημένες σε βούτηρο και αλειμμένες με σπιτική μαγιονέζα. Περιέχουν τσένταρ ή τυρί με χαμηλά λιπαρά, καπνιστό ζαμπόν ή γαλοπούλα. Συνοδεύεται με μικρή ομελέτα τυλιγμένη σε μπέικον και με μια πινελιά σπιτικής μαγιονέζας.',
+                'tst' : 'Ψωμί σταρένιο ή ολικής άλεσης, καπνιστό ζαμπόν ή γαλοπούλα, γκούντα ή τυρι με χαμηλά λιπαρά. Συνοδεύται με πατατάκια.',
+                'dirty' : 'Ψωμί για sandwich που περιέχει διπλό γκούντα, διπλό καπνιστό ζαμπόν, μπέικον, σαλάμι αέρος, ντομάτα, πατατάκια, σως ταρτάρ και είναι ψημένο με βούτηρο.',
+                'osand' : 'Δύο φέτες σταρένιο ή ολικής άλεσης ψωμί, βουτηγμένες σε μίγμα αυγού, ψημένες με βούτυρο και τοποθετημένες στο κέντρο μιας ομελέτας. Διπλώνεται και ψήνεται και από τις δύο πλευρές. Περιέχει τσένταρ, καπνιστό ζαμπόν ή γαλοπούλα και μπέικον. Συνοδεύεται με τηγανητές πατάτες και σπιτική μαγιονέζα.',
+                'cb' : 'Ψωμί μπριός, μπιφτέκι μοσχαρίσιο, καραμελωμένα κρεμμύδια, τσένταρ, ντομάτα, μπέικον, σως ταρτάρ, μουστάρδα και bbq σως. Συνοδεύεται με τηγανητές πατάτες και κέτσαπ.',
+                'chb' : 'Ψωμί μπριός, σπιτικό μπιφτέκι κοτόπουλο , καραμελωμένα κρεμμύδια, τσένταρ, ντομάτα, μπέικον, σως ταρτάρ, μουστάρδα και bbq σως. Συνοδεύεται με τηγανητές πατάτες και κέτσαπ.',
+                'vb' : 'Ψωμί μπριός, μπιφτέκι λαχανικών, καραμελωμένα κρεμμύδια, πίκλα αγγούρι, ντομάτα, πατέ ελιάς, κέτσαπ και bbq σως. Συνοδεύεται με τηγανητές πατάτες και κέτσαπ.',
+                'veb' : 'Ψωμί μπριός, μπιφτέκι λαχανικών, καραμελωμένα κρεμμύδια, τσένταρ, ντομάτα, μουστάρδα, σπιτική μαγιονέζα και bbq σως. Συνοδεύεται με τηγανητές πατάτες και κέτσαπ.',
+                'cheese_p' : 'Εκλεκτά τυριά με συνοδεία μαρμελάδας τσάτνεϊ και ψημένο γερμανικό ψωμί με προζύμι.',
+                'meat_p' : 'Εκλεκτά αλλαντικά με συνοδεία πατέ ελιάς τσάτνεϊ και ψημένο γερμανικό ψωμί Dinkel.',
+                'cheese_meat_p' : 'Εκλεκτά τυριά και αλλαντικά με συνοδεία πατέ ελιάς, μαρμελάδα τσάτνεϊ και ψημένο γερμανικό ψωμί με προζύμι.',
+                'kebab_p' : 'Κεμπαπάκια Θεσσαλονίκης με τηγανητές πατάτες, καραμελωμένα κρεμμύδια, ψημένο γερμανικό ψωμί πολύσπορο και σως ταρτάρ.',
+                'saus_p' : 'Εκλεκτά λουκάνικα με τηγανιτές πατάτες, καραμελωμένα κρεμμύδια, ψημένο γερμανικό ψωμί Dinkel και bbq σως.',
+                'kebab_saus_p' : 'Εκλεκτά λουκάνικα και κεμπαπάκια Θεσσαλονίκης με τηγανιτές πατάτες, καραμελωμένα κρεμμύδια, ψημένο γερμανικό ψωμί με προζύμι, σως ταρτάρ και bbq σως.',
+                'hf' : 'Μέλι, καρύδια, σταφίδες, μπανάνα και σιρόπι σφενδάμου. Σερβίρεται με μαρμελάδα κόκκινων φρούτων.',
+                'cf' : 'Πραλίνα φουντουκιού, τριμμένο μπισκότο, νιφάδες σοκολάτας, μπανάνα, κράνμπερι και ganache σοκολάτας.',
+                'pf' : 'Φυστικοβούτυρο, σταφίδες, μπανάνα και σιρόπι σφενδάμου. Σερβίρεται με μαρμελάδα κίτρινων φρούτων.',
+                'frtst' : 'Τεσσερις φέτες ψωμί μπριός βουτηγμένες σε μίγμα αυγού και ψημένες με βούτυρο. Με μέλι ή μαρμελάδα ή φυστικοβούτυρο, κανέλα, ζάχαρη άχνη, σιρόπι σφενδάμου, κράνμπερι, σταφίδες και καρύδια.',
+                'extra' : 'Extra: Αυγό μάτι +1€',
+                'extrad' : 'Extra: Μπέικον +0.50€',
+                'ntakos' : ' Ντάκος ',
+                'potatoes' : ' Πατάτες Τηγανιτές ',
+                'ntakosd' : 'Κρίθινο παξιμάδι, ντομάτα, φέτα τριμμένη, εξαιρετικά παρθένο ελαιόλαδο και άγρια ρίγανη. Συνοδεύται με έλιες.',
+                'potatoesd' : 'Πατάτες τηγανιτές με σως ταρτάρ ή bbq σως.',
+                'half': 'Όλα τα πλαττώ μπορούν να διατεθούν σε μισή ποσότητα.',
+                'summeronly': '* Διαθέσιμα μόνο το καλοκαίρι!',
+                'carcadet' :'Αποξηραμένα άνθη τριανταφυλλιάς, φλούδες πορτοκαλιού, άνθη ιβίσκου, κομμάτια μήλου, πέταλα λουλουδιών και αιθέρεο έλαιο πορτοκαλιού.',
+                'winteronly': '* Διαθέσιμα μόνο την περίοδο των Χριστουγέννων! 20 Νοεμβρίου - 20 Ιανουαρίου',
+                'ask' : '* Σε συνεννόηση με το service.',
+                'fizzi' : ' Ioli Fizzy (ανθρακούχο νερό) ',
+                'aqua' : ' Aqua Panna (μεταλλικό νερό) 750ml ',
+                'pelegrino' : ' Pelegrino (ανθρακούχο νερό) ',
+                'winter' : ' * Μόνο τον χειμώνα! ',
+                'egg' : 'ασπράδι αυγού.',
+                'vanillas' : 'Βανίλια (βύσινο) ',
+                'salted' : 'Chocolanelle Αλατισμένη Καραμέλα ',
+                'away' : 'Ολα τα cocktails διατίθενται και σε TAKE AWAY 5€'
+            }
+        };
+        $(function(){
+            $('.translate').click(function(){
+               var lang = $(this).attr('id');
+
+                $('.lang').each(function(index, element){
+                    $(this).text(arrLang[lang][$(this).attr('id')]);
+                });    
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <div class="bar">
+            <div class="translate" id="en"><img src="./images/usa.png" alt="usa" width="30" height="30"></div>
+            <div class="translate" id="gr"><img src="./images/greece.png" alt="greece" width="30" height="30"></div>
+            <label class="logo">MENU</label>
+        </div>
+        <div class="wrapper">
+            <ul class="nav-area">
+                <li class="dropdown"><a href="#" id="btn-1"><i class="fas fa-coffee"></i><abbr class="lang" id="coffee"> Coffee </abbr><i class="fas fa-angle-down"></i></a>
+                    <ul>
+                        <li class="dropdown demarcation"><a href="#">Espresso <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="normal">Normal </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 2.50€</li>
+                                        <li class="alpha">Decaf 2.50€</li>
+                                        <li class="alpha">Single-Origin 3€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="double">Double </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3€</li>
+                                        <li class="alpha">Decaf 3€</li>
+                                        <li class="alpha">Single-Origin 3.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Espresso Ristretto <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="normal">Normal </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 2.50€</li>
+                                        <li class="alpha">Decaf 2.50€</li>
+                                        <li class="alpha">Single-Origin 3€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="double">Double </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3€</li>
+                                        <li class="alpha">Decaf 3€</li>
+                                        <li class="alpha">Single-Origin 3.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Espresso Lungo <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="normal">Normal </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 2.50€</li>
+                                        <li class="alpha">Decaf 2.50€</li>
+                                        <li class="alpha">Single-Origin 3€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="double">Double </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3€</li>
+                                        <li class="alpha">Decaf 3€</li>
+                                        <li class="alpha">Single-Origin 3.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Espresso Americano <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="normal">Normal </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 2.50€</li>
+                                        <li class="alpha">Decaf 2.50€</li>
+                                        <li class="alpha">Single-Origin 3€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="double">Double </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3€</li>
+                                        <li class="alpha">Decaf 3€</li>
+                                        <li class="alpha">Single-Origin 3.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Espresso Macchiato <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="normal">Normal </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3€</li>
+                                        <li class="alpha">Decaf 3€</li>
+                                        <li class="alpha">Single-Origin 3.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="double">Double </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3.50€</li>
+                                        <li class="alpha">Decaf 3.50€</li>
+                                        <li class="alpha">Single-Origin 4€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="demarcation_1">A vegan option is also available</li>
+                                <!-- <li class="dropdown"><a href="#">Vegan <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 2.50€</li>
+                                        <li class="alpha">Decaf 2.50€</li>
+                                        <li class="alpha">Single-Origin 3€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li> -->
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Cappuccino <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="normal">Normal </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3.50€</li>
+                                        <li class="alpha">Decaf 3.50€</li>
+                                        <li class="alpha">Single-Origin 4€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="double">Double </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 4€</li>
+                                        <li class="alpha">Decaf 4€</li>
+                                        <li class="alpha">Single-Origin 4.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Latte <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3.50€</li>
+                                        <li class="alpha">Decaf 3.50€</li>
+                                        <li class="alpha">Single-Origin 4€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Con panna <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3€</li>
+                                        <li class="alpha">Decaf 3€</li>
+                                        <li class="alpha">Single-Origin 4€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="demarcation_1">A vegan option is also available</li>
+                                <!-- <li class="dropdown"><a href="#">Vegan <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3.50€</li>
+                                        <li class="alpha">Decaf 3.50€</li>
+                                        <li class="alpha">Single-Origin 4€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li> -->
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Freddo Espresso <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="normal">Normal </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3€</li>
+                                        <li class="alpha">Decaf 3€</li>
+                                        <li class="alpha">Single-Origin 3.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="double">Double </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 4€</li>
+                                        <li class="alpha">Decaf 4€</li>
+                                        <li class="alpha">Single-Origin 4.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Freddo Cappuccino <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="normal">Normal </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3.50€</li>
+                                        <li class="alpha">Decaf 3.50€</li>
+                                        <li class="alpha">Single-Origin 4€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="double">Double </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 4€</li>
+                                        <li class="alpha">Decaf 4€</li>
+                                        <li class="alpha">Single-Origin 4.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="demarcation_1">A vegan option is also available</li>
+                                <!-- <li class="dropdown"><a href="#">Vegan <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3.50€</li>
+                                        <li class="alpha">Decaf 3.50€</li>
+                                        <li class="alpha">Single-Origin 4€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li> -->
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Frappe <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">Normal 3€</li>
+                                <li class="alpha">Decaf 3€</li>
+                                <li class="alpha">with Baileys 3.50€</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Nes <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">Normal 3€</li>
+                                <li class="alpha">Decaf 3€</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="filter">Filter </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="kind alpha"><abbr class="lang" id="methods">Methods </abbr></li>
+                                <li class="alpha">Chemex Dripper 3.50€</li>
+                                <li class="alpha">Hand Brew 3.50€</li>
+                                <li class="alpha">V60 Dripper 3.50€</li>
+                            </ul>
+                        </li>
+                        <li class="demarcation_1">Cold Brew 3.50€<br><hr><p class="lang" id="summeronly">* Summer only!</p></li>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="greek">Greek </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="normal">Normal </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Normal 2.50€</li>
+                                        <li class="alpha">Decaf 2.50€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="double">Double </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Normal 3€</li>
+                                        <li class="alpha">Decaf 3€</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Corretto <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="normal">Normal </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3€</li>
+                                        <li class="alpha">Decaf 3€</li>
+                                        <li class="alpha">Single-Origin 3.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="double">Double </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Siena 3.50€</li>
+                                        <li class="alpha">Decaf 3.50€</li>
+                                        <li class="alpha">Single-Origin 4€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Irish <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">Siena 5€</li>
+                                <li class="alpha">Decaf 5€</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Romano <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="normal">Normal </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul class="scrolldown_165">
+                                        <li class="fix_170"></li>
+                                        <li class="alpha">Siena 2.50€</li>
+                                        <li class="alpha">Decaf 2.50€</li>
+                                        <li class="alpha">Single-Origin 3€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr  class="lang" id="double">Double </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul class="scrolldown_110">
+                                        <li class="fix_115"></li>
+                                        <li class="alpha">Siena 3€</li>
+                                        <li class="alpha">Decaf 3€</li>
+                                        <li class="alpha">Single-Origin 3.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="flavors">Flavors </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha"><abbr class="lang" id="caramel">Caramel </abbr>+0.50€</li>
+                                <li class="alpha"><abbr class="lang" id="chocolate">Chocolate </abbr>+0.50€</li>
+                                <li class="alpha"><abbr class="lang" id="cookies">Cookies </abbr>+0.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                <li class="alpha"><abbr class="lang" id="coconut">Coconut </abbr>+0.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                <li class="alpha"><abbr class="lang" id="hazelnut">Hazelnut </abbr>+0.50€</li>
+                                <li class="alpha"><abbr class="lang" id="strawberry">Strawberry </abbr>+0.50€</li>
+                                <li class="alpha"><abbr class="lang" id="vanilla">Vanilla </abbr>+0.50€</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" id="btn-0"><i class="fas fa-apple-alt"></i><abbr class="lang" id="soft_drinks_juices"> Juices & Soft Drinks </abbr><i class="fas fa-angle-down"></i></a>
+                    <ul>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="juices"> Juices </abbr> <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha"><abbr class="lang" id="apple">Apple </abbr>3€</li>
+                                <li class="alpha"><abbr class="lang" id="banana">Banana </abbr>3€</li>
+                                <li class="alpha"><abbr class="lang" id="cranberry_j">Cranberry </abbr>3€</li>
+                                <li class="alpha"><abbr class="lang" id="lemon">Lemon </abbr>3€</li>
+                                <li class="alpha"><abbr class="lang" id="mixed">Mixed </abbr>3€</li>
+                                <li class="alpha"><abbr class="lang" id="orange">Orange </abbr>3€</li>
+                                <li class="alpha"><abbr class="lang" id="peach">Peach </abbr>3€</li>
+                                <li class="alpha"><abbr class="lang" id="pineapple">Pineapple </abbr>3€</li>
+                                <li class="alpha"><abbr class="lang" id="sour">Sour cherry </abbr>3€</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="natural_juices"> Natural Juices </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha"><abbr class="lang" id="mixed">Mixed </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="orange">Orange </abbr>3.50€</li>
+                                <li class="alpha"><abbr class="lang" id="fruitlato">Fruitlato </abbr>4€</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="soft_drinks"> Soft Drinks </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">Coca-Cola Original | Zero | Light 3€</li>
+                                <li class="alpha"><abbr class="lang" id="grapefruit">Grapefruit Soda </abbr>Schweppes 3€</li>
+                                <li class="alpha"><abbr class="lang" id="lemonade">Lemonade </abbr>ΕΨΑ 3€</li>
+                                <li class="alpha"><abbr class="lang" id="blue">Orangeade (Blue) </abbr>ΕΨΑ 3€</li>
+                                <li class="alpha">Redbull 5€</li>
+                                <li class="alpha"><abbr class="lang" id="soda">Soda </abbr>ΕΨΑ 3€</li>
+                                <li class="alpha">Sprite 3€</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#"> H2O <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha"><abbr class="lang" id="ioli">Ioli (mineral water) 500ml </abbr>0.50€</li>
+                                <li class="alpha"><abbr class="lang" id="fizzi">Ioli Fizzy (sparkling water) </abbr>3€</li>
+                                <li class="alpha"><abbr class="lang" id="aqua">Aqua Panna (mineral water) 750ml </abbr>2€</li>
+                                <li class="alpha"><abbr class="lang" id="pelegrino">Pelegrino (sparkling water) </abbr>3€</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#"> Lemonodasos <i class="fas fa-angle-down"></i><br><hr><p class="lang" id="summeronly">* Summer only!</p></a>
+                            <ul>
+                                <li class="alpha"><abbr class="lang" id="lcj">Lemonade & Cucumber Juice </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="lcc">Lemonade with Chios mastic </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="lsg">Lemonade with Stevia & Ginger </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="sclj">Sour Cherry & Lemon Juice </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="plo">Pomegranate & Lemon Juice </abbr>4€</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="wt"> Water Ice </abbr><i class="fas fa-angle-down"></i><br><hr><p class="lang" id="summeronly">* Summer only!</p></a>
+                            <ul>
+                                <li class="alpha"><abbr class="lang" id="lemon">Lemon </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="melon">Melon </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="peach">Peach </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="pineapple">Pineapple </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="strawberry">Strawberry </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="watermelon">Watermelon </abbr>4€</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" id="btn-0-1"><i class="fas fa-mug-hot"></i><abbr class="lang" id="beverages"> Beverages </abbr><i class="fas fa-angle-down"></i></a>
+                    <ul>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="chocolate_b">Hot & Iced Chocolate </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha"><abbr class="lang" id="classic">Classic </abbr>3.50€</li>
+                                <li class="alpha">Vegan (<abbr class="lang" id="vegan"> with almond milk </abbr>) 4€</li>
+                                <li class="alpha"><abbr class="lang" id="bitter">Bitter </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="hazelnut">Hazelnut </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="spicy">Spicy </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="strawberry">Strawberry </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="white_chocolate">White </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="mastic">Mastic (White) </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="cranberry">Cranberry (White) </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="viennois">Viennois </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="salted">Chocolanelle Salted Caramel </abbr>4€<hr><p class="lang" id="ask">* In consultation with the service.</p</li>
+                                <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="flavors">Flavors </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha"><abbr class="lang" id="caramel">Caramel </abbr>+0.50€</li>
+                                        <li class="alpha"><abbr class="lang" id="cookies">Cookies </abbr>+0.50€</li>
+                                        <li class="alpha"><abbr class="lang" id="coconut">Coconut </abbr>+0.50€</li>
+                                        <li class="alpha"><abbr class="lang" id="hazelnut">Hazelnut </abbr>+0.50€</li>
+                                        <li class="alpha"><abbr class="lang" id="strawberry">Strawberry </abbr>+0.50€</li>
+                                        <li class="alpha"><abbr class="lang" id="vanilla">Vanilla </abbr>+0.50€</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="tea">Tea </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="hot_tea">Hot Tea </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul class="scrolldown_305" id="scrollwindow">
+                                        <li class="fix_310"></li>
+                                        <li class="alpha"><abbr class="lang" id="caramel">Caramel </abbr>3€</li>
+                                        <li class="alpha"><abbr class="lang" id="ceylan">Ceylan </abbr>3€</li>
+                                        <li class="alpha"><abbr class="lang" id="chamomile">Chamomile </abbr>3€</li>
+                                        <li class="alpha">English Breakfast 3€</li>
+                                        <li class="alpha">Earl Grey 3€</li>
+                                        <li class="alpha"><abbr class="lang" id="green">Green </abbr>3€</li>
+                                        <li class="scroll"></li>
+                                        <li class="alpha"><abbr class="lang" id="lemon">Lemon </abbr>3€</li>
+                                        <li class="alpha"><abbr class="lang" id="mint">Mint </abbr>3€</li>
+                                        <li class="alpha"><abbr class="lang" id="mountain">Mountain </abbr>3€</li>
+                                        <li class="alpha"><abbr class="lang" id="red_tea">4 Red Fruits </abbr>3€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="iced_tea">Iced Tea </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul class="scrolldown_252" id="scrollwindow14">
+                                        <li class="fix_257"></li>
+                                        <li class="alpha"><abbr class="lang" id="green">Green </abbr>3€</li>
+                                        <li class="alpha"><abbr class="lang" id="lemon">Lemon </abbr>3€</li>
+                                        <li class="alpha"><abbr class="lang" id="peach">Peach </abbr>3€</li>
+                                        <li class="scroll"></li>
+                                        <li class="alpha">Carcadet <abbr class="lang" id="homemade" >Homemade </abbr>3.50€<br><hr><p class="lang" id="carcadet">Dried rose blossoms, orange peel, hibiscus blossoms, apple pieces, flower petals and orange essential oil.</p><hr><p class="lang" id="summeronly">* Summer only!</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Milkshake <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha"><abbr class="lang" id="banana">Banana </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="chocolate">Chocolate </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="strawberry">Strawberry </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="vanilla">Vanilla </abbr>4€</li>
+                            </ul>
+                        </li>
+                        <li class="demarcation_1"><abbr class="lang" id="cocoa">Cocoa </abbr>3€</li>
+                        <li class="demarcation_1">Freddoccino 4€</li>
+                        <li class="demarcation_1">Mochaccino 4€</li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" id="btn-0-2"><i class="fas fa-utensils"></i><abbr class="lang" id="food"> Food </abbr><i class="fas fa-angle-down"></i></a>
+                    <ul>
+                        <li class="dropdown demarcation"><a href="#">Brunch <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">American Breakfast 5€<br><hr><p class="lang" id="american" >Scrambled eggs with cheddar and smoked ham on toasted German rye bread. Served with bacon, cocktail sausages and a touch of homemade mayonnaise.</p></li>
+                                <li class="alpha">English Breakfast 5€<br><hr><p class="lang" id="english" >Fried eggs with cheddar, bacon, cocktail sausages, toasted German bread with sourdough and a touch of mustard and ketchup.</p></li>
+                                <li class="alpha">Goodmorning Brunch 5€<br><hr><p class="lang" id="gm" >Omelette stuffed with cheddar and smoked ham or turkey. Served with bacon, cocktail sausages, toasted German bread with sourdough and a touch of homemade mayonnaise.</p></li>
+                                <li class="alpha">Mamas 5€<br><hr><p class="lang" id="mm" >Fried potatoes and on top of them, fried eggs, cheddar and bacon. Served with toasted German multigrain bread and a touch of ketchup and homemade mayonnaise.</p></li>
+                                <li class="alpha">Papas 5€<br><hr><p class="lang" id="pp" >Baked rustic sausage cut into slices with scrambled eggs, cheddar and smoked ham. Served with bacon, toasted German Dinkel bread and a touch of mustard and homemade mayonnaise.</p></li>
+                                <li class="alpha"><abbr class="lang" id="tyropitari">Tyropitari </abbr>4.50€<br><hr><p class="lang" id="tyr" >Served with thyme honey and white and black sesame.</p></li>
+                                <li class="alpha"><abbr class="lang" id="tiganopsomo">Tiganopsomo </abbr>4.50€<br><hr><p class="lang" id="tig" >Served with thyme honey and white and black sesame.</p></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Sandwiches <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">Club Sandwich 5€<br><hr><p class="lang" id="cs" >Wheat or wholemeal bread, gouda or low-fat cheese, smoked ham or turkey, bacon, tomato and homemade mayonnaise. Served with french fries and ketchup.</p></li>
+                                <li class="alpha">Croque Madame 4.50€<br><hr><p class="lang" id="cmd" >Two buttered slices of baked German bread with sourdough, smeared with homemade mayonnaise, with cheddar and smoked ham or turkey inside and a fried egg on top. Served with a touch of homemade mayonnaise.</p></li>
+                                <li class="alpha">Croque Monsieur 4.50€<br><hr><p class="lang" id="cms" >Two buttered slices of baked German bread with sourdough, smeared with homemade mayonnaise, with cheddar and smoked ham or turkey inside and a small omelette on top. Served with a touch of homemade mayonnaise.</p></li>
+                                <li class="alpha">Hot Dog 5.50€<br><hr><p class="lang" id="dog" >Sandwich bread, large frankfurter, caramelized onions, mustard and bbq sauce. Served with french fries and ketchup.</p></li>
+                                <li class="alpha">Monte Cristo 4.50€<br><hr><p class="lang" id="cristo" >Three slices of wheat or wholemeal bread dipped in a mixture of egg and milk or skim milk, baked in butter and smeared with homemade mayonnaise. They contain cheddar or low-fat cheese, smoked ham or turkey. Served with a small omelette wrapped in bacon and a touch of homemade mayonnaise.</p></li>
+                                <li class="alpha"><abbr class="lang" id="omelette_sandwich">Omelette Sandwich </abbr>5.50€<br><hr><p class="lang" id="osand" >Two slices of wheat or wholemeal bread, dipped in egg mixture, baked in butter and placed in the center of an omelette. Fold and bake on both sides. Contains cheddar, smoked ham or turkey and bacon. Served with french fries and homemade mayonnaise.</p></li>
+                                <li class="alpha"><abbr class="lang" id="toast">Toast </abbr>"classico" 3€<br><hr><p class="lang" id="tst" >Wheat or wholemeal bread, smoked ham or turkey, gouda or low-fat cheese. Served with chips.</p></li>
+                                <li class="alpha"><abbr class="lang" id="vromiko">Vromiko </abbr>4€<br><hr><p class="lang" id="dirty" >Sandwich bread that contains double gouda, double smoked ham, bacon, air salami, tomato, chips, tartar sauce and is baked with butter.</p></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Burgers <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">Cheeseburger 6.50€<br><hr><p class="lang" id="cb">Brioche bread, beef burger, caramelized onions, cheddar, tomato, bacon, tartar sauce, mustard and bbq sauce. Served with french fries and ketchup.</p><br><p class="lang" id="extra" style="color: goldenrod; font-size: 15px; margin-top: -10px">Extra: Fried egg +1€</p></li>
+                                <li class="alpha">Chicken burger 6.50€<br><hr><p class="lang" id="chb">Brioche bread, homemade chicken burger, caramelized onions, cheddar, tomato, bacon, tartar sauce, mustard and bbq sauce. Served with french fries and ketchup.</p><br><p class="lang" id="extra" style="color: goldenrod; font-size: 15px; margin-top: -10px">Extra: Fried egg +1€</p></li>
+                                <li class="alpha">Vegan Burger 5€<br><hr><p class="lang" id="vb">Brioche bread, vegetable burger, caramelized onions, pickle cucumber, tomato, olive pate, ketchup and bbq sauce. Served with french fries and ketchup.</p></li>
+                                <li class="alpha">Vegetarian Burger 5€<br><hr><p class="lang" id="veb">Brioche bread, vegetable burger, caramelized onions, cheddar, tomato, mustard, homemade mayonnaise and bbq sauce. Served with french fries and ketchup.</p><br><p class="lang" id="extra" style="color: goldenrod; font-size: 15px; margin-top: -10px">Extra: Fried egg +1€</p></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="platters">Platters </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha"><abbr class="lang" id="cheese">Cheese </abbr>14€<br><hr><p class="lang" id="cheese_p">Fine cheeses accompanied by chutney jam and toasted German bread with sourdough.</p></li>
+                                <li class="alpha"><abbr class="lang" id="meat">Meat </abbr>13€<br><hr><p class="lang" id="meat_p">Fine cold cuts accompanied by olive pate and toasted German Dinkel bread.</p></li>
+                                <li class="alpha"><abbr class="lang" id="cheese_meat">Cheese & Meat </abbr>16€<br><hr><p class="lang" id="cheese_meat_p">Fine cheeses and cold cuts accompanied by olive pate, chutney jam and toasted German bread with sourdough.</p></li>
+                                <li class="alpha"><abbr class="lang" id="kebab">Kebab </abbr>14€<br><hr><p class="lang" id="kebab_p">Kebabs of Thessaloniki with french fries, caramelized onions, toasted German multigrain bread and tartar sauce.</p></li>
+                                <li class="alpha"><abbr class="lang" id="sausage">Sausage </abbr>15€<br><hr><p class="lang" id="saus_p">Fine sausages with french fries, caramelized onions, toasted German Dinkel bread and bbq sauce.</p></li>
+                                <li class="alpha"><abbr class="lang" id="kebab_sausage">Kebab & Sausage </abbr>16€<br><hr><p class="lang" id="kebab_saus_p">Fine sausages and kebabs from Thessaloniki with french fries, caramelized onions, toasted German bread with sourdough, tartar sauce and bbq sauce.</p></li>
+                                <li class="price">*<abbr class="lang" id="half">All platters can be sold in half quantity. </abbr></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="desserts">Desserts </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#">Pancakes <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Honey & Fruits 6€<br><hr><p class="lang" id="hf">Honey, nuts, raisins, banana and maple syrup. Served with red fruit jam.</p></li>
+                                        <li class="alpha">Chocolate & Fruits 6€<br><hr><p class="lang" id="cf">Hazelnut praline, grated biscuit, chocolate flakes, banana, cranberry and chocolate ganache.</p></li>
+                                        <li class="alpha">Peanut butter & Fruits 6€<br><hr><p class="lang" id="pf">Peanut butter, raisins, banana and maple syrup. Served with yellow fruit jam.</p></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="spoon">Spoon Sweets </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha"><abbr class="lang" id="grape">Grape </abbr>2€</li>
+                                        <li class="alpha"><abbr class="lang" id="quince">Quince </abbr>2€</li>
+                                        <li class="alpha"><abbr class="lang" id="sour">Sour Cherry </abbr>2€</li>
+                                        <li class="alpha"><abbr class="lang" id="vanilla">Vanilla </abbr>2€</li>
+                                        <li class="alpha"><abbr class="lang" id="vanillas">Vanilla (sour cherry) </abbr>2.50€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="ice_cream">Ice Cream </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha"><abbr class="lang" id="banana">Banana </abbr>1.50€</li>
+                                        <li class="alpha"><abbr class="lang" id="chocolate">Chocolate </abbr>1.50€</li>
+                                        <li class="alpha"><abbr class="lang" id="strawberry">Strawberry </abbr>1.50€</li>
+                                        <li class="alpha"><abbr class="lang" id="vanilla">Vanilla </abbr>1.50€</li>
+                                    </ul>
+                                </li>
+                                <li class="alpha">French Toast 6€<br><hr><p class="lang" id="frtst">Four slices of brioche bread dipped in egg mixture and baked with butter. With honey or jam or peanut butter, cinnamon, powdered sugar, maple syrup, cranberries, raisins and nuts.</p></li>
+                                <li class="alpha"><abbr class="lang" id="chocolate_pie">Chocolate Pie </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="souffle">Chocolate Souffle </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="tart">Lemon Tart </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="orange_pie">Orange Pie </abbr>4€</li>
+                                <li class="alpha"><abbr class="lang" id="flora">Pasta Flora (apple / cherry) </abbr>4€<br><hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                            </ul>
+                        </li>
+                        <li class="demarcation_1"><abbr class="lang" id="potatoes">French Fries </abbr>3€<br><hr><p class="lang" id="potatoesd">French fries with tartar sauce or bbq sauce.</p><br><p class="lang" id="extrad" style="color: goldenrod; font-size: 15px; margin-top: -10px">Extra: Bacon +0.50€</p></li>
+                        <li class="demarcation_1"><abbr class="lang" id="ntakos">Dakos </abbr>4€<br><hr><p class="lang" id="ntakosd">Barley nut, tomato, grated feta, extra virgin olive oil and wild oregano. Served with olives.</p></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" id="btn-0-3"><i class="fas fa-wine-glass-alt"></i><abbr class="lang" id="wine"> Wines </abbr><i class="fas fa-angle-down"></i></a>
+                    <ul>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="white">White </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="dry">Dry </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="glass">Glass </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul class="scrolldown_330" id="scrollwindow2">
+                                                <li class="fix_335"></li>
+                                                <li class="alpha">Κυρά της Λίμνης 4€<br><hr><p class="lang" id="kyra_v">Type: Roditis </p></li>
+                                                <li class="alpha">Κτήμα Αργυρίου 5€<br><hr><p class="lang" id="karg_v">Type: Malagouzia </p></li>
+                                                <li class="alpha">Κτήμα Καριπίδης 5€<br><hr><p class="lang" id="kkar_v">Type: Sauvignon Blanc </p></li>
+                                                <li class="scroll" id="scrolldown"></li>
+                                                <li class="alpha">Κτήμα Γεροβασιλείου 5.50€<br><hr><p class="lang" id="kgero2_v">Type: Malagouzia, Assirtiko </p></li>
+                                                <li class="alpha">Βίβλια Χώρα 5.50€<br><hr><p class="lang" id="biblia_w_v">Type: Assirtiko, Sauvignon Blanc </p></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="bottle">Bottle </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul class="scrolldown_330" id="scrollwindow3">
+                                                <li class="fix_335"></li>
+                                                <li class="alpha">Κυρά της Λίμνης 25€<br><hr><p class="lang" id="kyra_v">Type: Roditis </p></li>
+                                                <li class="alpha">Κτήμα Καριπίδης 30€<br><hr><p class="lang" id="kkar_v">Type: Sauvignon Blanc </p></li>
+                                                <li class="alpha">Κτήμα Αργυρίου 30€<br><hr><p class="lang" id="karg_v">Type: Malagouzia </p></li>
+                                                <li class="scroll" id="scrolldown"></li>
+                                                <li class="alpha">Κτήμα Γεροβασιλείου 35€<br><hr><p class="lang" id="kgero2_v">Type: Malagouzia, Assirtiko </p></li>
+                                                <li class="alpha">Κτήμα Γεροβασιλείου 48€<br><hr><p class="lang" id="kgero3_v">Type: Chardonnay </p><hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                                <li class="alpha">Βίβλια Χώρα 35€<br><hr><p class="lang" id="biblia_w_v">Type: Assirtiko, Sauvignon Blanc </p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="semi_dry">Semi-Dry </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="glass">Glass </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul>
+                                                <li class="alpha">Ακάτιος 5€</li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="bottle">Bottle </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul>
+                                                <li class="alpha">Ακάτιος 30€</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="semi_sweet">Semi-Sweet </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="glass">Glass </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul>
+                                                <li class="alpha">Hit The Road 4€<br><hr><p class="lang" id="hit_w_v">Type: Chardonnay, Limniona </p></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="bottle">Bottle </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul>
+                                                <li class="alpha">Hit The Road 25€<br><hr><p class="lang" id="hit_w_v">Type: Chardonnay, Limniona </p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="sweet">Sweet </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="glass">Glass </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul>
+                                                <li class="alpha">Όψιμος Τρύγος 6€<br><hr><p class="lang" id="ops_v">Type: Moschoudi </p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="free">Alcohol Free </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul class="fixtop2">  
+                                        <li class="alpha">Natureo Free Torres (SPAIN) 5€<br><hr><p class="lang" id="muscat">Type: Muscat </p><hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="rosé">Rosé </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="dry">Dry </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="glass">Glass </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul>
+                                                <li class="alpha">Μελάς Nautilus 4€<br><hr><p class="lang" id="naut_v">Type: Grenache Rouge, Agiorgitiko, Syrah </p></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="bottle">Bottle </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul class="scrolldown_165">
+                                                <li class="fix_170"></li>
+                                                <li class="alpha">Μελάς Nautilus 25€<br><hr><p class="lang" id="naut_v">Type: Grenache Rouge, Agiorgitiko, Syrah </p></li>
+                                                <li class="alpha">Μελάς IDYLE 35€<br><hr><p class="lang" id="naut_v">Type: Grenache Rouge, Agiorgitiko, Syrah </p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="semi_dry">Semi-Dry </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="glass">Glass </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul>
+                                                <li class="alpha">Από Δύο Χωριά 5€<br><hr><p class="lang" id="apo_v">Type: Mavro Mesenikola </p></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="bottle">Bottle </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul>
+                                                <li class="alpha">Από Δύο Χωριά 30€<br><hr><p class="lang" id="apo_v">Type: Mavro Mesenikola </p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="semi_sweet">Semi-Sweet </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="glass">Glass </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul>
+                                                <li class="alpha">Xαρτοδιπλωμένος 5€</li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="bottle">Bottle </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul>
+                                                <li class="alpha">Xαρτοδιπλωμένος 30€</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="red">Red </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="dry">Dry </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="glass">Glass </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul>
+                                                <li class="alpha">Έρωχος 4€<br><hr><p class="lang" id="eroxos_v">Type: Mavroudi, Merlot </p></li>
+                                                <li class="alpha">Portes Σκούρας 5€<br><hr><p class="lang" id="portes_v">Type: Merlot </p></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="bottle">Bottle </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul class="scrolldown_217" id="scrollwindow4">
+                                                <li class="fix_222"></li>
+                                                <li class="alpha">Έρωχος 25€<br><hr><p class="lang" id="eroxos_v">Type: Mavroudi, Merlot </p></li>
+                                                <li class="alpha">Βίβλια Χώρα 38€<br><hr><p class="lang" id="biblia_v">Type: Cabernet Sauvignon, Merlot, Agiorgitiko  </p></li>
+                                                <li class="scroll"></li>
+                                                <li class="alpha">Κτήμα Γεροβασιλείου 48€<br><hr><p class="lang" id="kgero1_v">Type: Limnio, Mavroudi, Mavrotragano </p><hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                                <li class="alpha">Portes Σκούρας 30€<br><hr><p class="lang" id="portes_v">Type: Merlot </p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="semi_sweet">Semi-Sweet </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="glass">Glass </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul>
+                                                <li class="alpha">Hit The Road 4€<br><hr><p class="lang" id="hit_r_v">Type: Limniona, Cabernet Sauvignon </p></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="bottle">Bottle </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul>
+                                                <li class="alpha">Hit The Road 25€<br><hr><p class="lang" id="hit_r_v">Type: Limniona, Cabernet Sauvignon </p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="sweet">Sweet </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="glass">Glass </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul class="scrolldown_110" id="scrollwindow5">
+                                                <li class="fix_115"></li>
+                                                <li class="alpha">Sangria 4€</li>
+                                                <li class="scroll"></li>
+                                                <li class="alpha">Vinsanto 8€</li>
+                                                <li class="alpha">Beaujolais Nouveau 5€<br><hr><p class="lang" id="beau_v">Type: Fresh French wine </p><p class="lang" id="winteronly">* Christmas only! 20 November - 20 January</p><hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#"><abbr class="lang" id="bottle">Bottle </abbr><i class="fas fa-angle-down"></i></a>
+                                            <ul class="scrolldown_110">
+                                                <li class="fix_115"></li>
+                                                <li class="alpha">Beaujolais Nouveau 30€<br><hr><p class="lang" id="beau_v">Type: Fresh French wine </p><p class="lang" id="winteronly">* Christmas only! 20 November - 20 January</p><hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="hot_wine">Hot Wine </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Glühwein 4.50€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="free">Alcohol Free </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul class="fixtop2">  
+                                        <li class="alpha">Natureo Free Torres (SPAIN) 5€<br><hr><p class="lang" id="syrah">Type: Syrah </p><hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="champagne">Champagne </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="glass">Glass </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul class="scrolldown_165 fixtop" id="scrollwindow6">
+                                        <li class="fix_170"></li>
+                                        <li class="alpha">Moscato d'Asti 5€</li>
+                                        <li class="scroll"></li>
+                                        <li class="alpha">Moscato d'Asti rose 5€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                        <li class="alpha">Prosecco 5€</li>
+                                        <li class="alpha">Asti Martini (200 ml) 10€</li>
+                                        <li class="alpha">Moët (200 ml) 20€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="bottle">Bottle </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul class="scrolldown_165 fixtop" id="scrollwindow7">
+                                        <li class="fix_170"></li>
+                                        <li class="alpha">Moscato d'Asti 30€</li>
+                                        <li class="scroll"></li>
+                                        <li class="alpha">Moscato d'Asti rose 30€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                        <li class="alpha">Prosecco 30€</li>
+                                        <li class="alpha">Asti Martini 40€</li>
+                                        <li class="alpha">Moët 150€</li>
+                                        <li class="alpha">Dom Pérignon 300€</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" id="btn-2"><i class="fas fa-beer"></i><abbr class="lang" id="beer"> Beers </abbr><i class="fas fa-angle-down"></i></a>
+                    <ul>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="draught">Draught </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">Erdinger Weiss 330ml 5€</li>
+                                <li class="alpha">Fischer 330ml 4€</li>
+                                <li class="alpha">Brand 330ml 4€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#"><abbr class="lang" id="bottle">Bottle </abbr><i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="blonde">Blonde </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul class="scrolldown_270" id="scrollwindow8">
+                                        <li class="fix_275"></li>
+                                        <li class="kind">Pilsener</li>
+                                        <li class="alpha">Μάμος 4.50€</li>
+                                        <li class="alpha">Krusovitse 5€</li>
+                                        <li class="kind">Lager</li>
+                                        <li class="alpha">Amstel Radler 4€</li>
+                                        <li class="scroll"></li>
+                                        <li class="alpha">Desperados 5.50€</li>
+                                        <li class="alpha">Heineken 4.50€</li>
+                                        <li class="alpha">Sol 5€</li>
+                                        <li class="alpha">ΝΥΜΦΗ 4.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                        <li class="kind">Weiss</li>
+                                        <li class="alpha">Άλφα Weiss 5.50€</li>
+                                        <li class="kind">I.P.A.</li>
+                                        <li class="alpha">Amstel Kargo 5€</li>
+                                        <li class="alpha">Lagunitas 5.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                        <li class="kind">Trappist</li>
+                                        <li class="alpha">Chimay White 6€</li>
+                                        <li class="kind">Golden Ale</li>
+                                        <li class="alpha">Duvel 6€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="red_beer">Red </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul class="scrolldown_217" id="scrollwindow16">
+                                        <li class="fix_222"></li>
+                                        <li class="kind">Trappist</li>
+                                        <li class="alpha">Chimay Red 6€</li>
+                                        <li class="kind">Irish Ale</li>
+                                        <li class="alpha">McFarland 5€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="dark">Dark </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul class="scrolldown_165" id="scrollwindow9">
+                                        <li class="fix_170"></li>
+                                        <li class="kind">Bock</li>
+                                        <li class="alpha">Amstel Bock 5€</li>
+                                        <li class="kind">Trappist</li>
+                                        <li class="scroll"></li>
+                                        <li class="alpha">Chimay Blue 6€</li>
+                                        <li class="kind">Dunkel</li>
+                                        <li class="alpha">Erdinger Dunkel 6€</li>
+                                        <li class="kind">Irish Stout</li>
+                                        <li class="alpha">Murphy's 6€<li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#"><abbr class="lang" id="free">Alcohol Free </abbr><i class="fas fa-angle-right"></i></a>
+                                    <ul class="scrolldown_105">
+                                        <li class="fix_110"></li>
+                                        <li class="alpha">Amstel 4€</li>
+                                        <li class="alpha">Buckler 4€</li>
+                                        <li class="alpha">Heineken 4€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Cyder <i class="fas fa-angle-right"></i></a>
+                                    <ul class="fixtop3">
+                                        <li class="alpha">Μηλοκλέφτης 4.50€</li>
+                                        <li class="alpha">Strongbow Red / White 4.50€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li> 
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" id="btn-3"><i class="fas fa-glass-whiskey"></i><abbr class="lang" id="drinks"> Drinks </abbr><i class="fas fa-angle-down"></i></a>
+                    <ul>
+                        <li class="dropdown demarcation"><a href="#">Whiskey <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#">Scotch <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="dropdown demarcation"><a href="#">Malt <i class="fas fa-angle-down"></i></a>
+                                            <ul class="scrolldown_655" id="scrollwindow10">
+                                                <li class="fix_660"></li>
+                                                <li class="kind">Islands</li>                                                        
+                                                    <li class="alpha">Jura 10€</li>
+                                                    <li class="alpha">Talisker 10 y.o. 10€</li>
+                                                    <li class="alpha">Talisker SKYE 10€</li>
+                                                    <li class="alpha">Scapa 10€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                                <li class="kind">Highlands</li>
+                                                    <li class="alpha">Aberfeldy 12 y.o. 9€</li>
+                                                    <li class="alpha">Clynelish 14 y.o. 12€</li>
+                                                    <li class="alpha">Glenmorangie 10 y.o. 8€</li>
+                                                    <li class="alpha">Oban 14 y.o. 12€</li>    
+                                                <li class="kind">Speyside</li>
+                                                    <li class="alpha">Aberlour 10 y.o. 9€</li>
+                                                    <li class="scroll"></li>
+                                                    <li class="alpha">Aberlour 12 y.o. 9€</li>
+                                                    <li class="alpha">Balvenie 12 y.o. 9€</li>
+                                                    <li class="alpha">Balvenie 15 y.o. 13€</li>
+                                                    <li class="alpha">Cardhu 12 y.o. 8€</li>
+                                                    <li class="alpha">Cragganmore 9€</li>
+                                                    <li class="alpha">Cutty Sark 10 y.o. 10€</li>
+                                                    <li class="alpha">Dalwhinnie 15 y.o. 13€</li>
+                                                    <li class="alpha">Glenallachie 12 y.o. 11€</li>
+                                                    <li class="alpha">Glen Grand 8€</li>
+                                                    <li class="alpha">Glenfiddich 12 y.o. 8€</li>
+                                                    <li class="alpha">Glenfiddich 15 y.o. 13€</li>
+                                                    <li class="alpha">Glenfiddich 18 y.o. 15€</li>
+                                                    <li class="alpha">Glenlivet 9€</li>
+                                                    <li class="alpha">Glenrothes 10€</li>
+                                                    <li class="alpha">Macallan Amber 12 y.o. 10€</li>
+                                                    <li class="alpha">Macallan Sienna 18 y.o. 15€</li>
+                                                    <li class="alpha">Longmorn Distiller's Choice 16 y.o. 14€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                                    <li class="alpha">Singleton 12 y.o. 10€</li>
+                                                    <li class="alpha">Singleton Tailfire 9€</li> 
+                                                <li class="kind">Lowlands</li>
+                                                    <li class="alpha">Glenkinchie 10 y.o. 8€</li>
+                                                    <li class="alpha">Glenkinchie 12 y.o. 9€</li> 
+                                                <li class="kind">Islay</li>
+                                                    <li class="alpha">Caol Ila 9€</li>
+                                                    <li class="alpha">Lagavulin 16 y.o. 14€</li>    
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown demarcation"><a href="#">Blended <i class="fas fa-angle-down"></i></a>
+                                            <ul class="scrolldown_655" id="scrollwindow11">
+                                                <li class="fix_660"></li>
+                                                <li class="alpha">Ballantine's 7€</li>
+                                                <li class="alpha">Ballantine's 12 y.o. 8€</li>                                                           
+                                                <li class="alpha">Ballantine's 21 y.o. 25€</li>
+                                                <li class="alpha">Bell's 7€</li>
+                                                <li class="alpha">Chivas Regal 12 y.o. 8€</li>
+                                                <li class="alpha">Chivas Regal 18 y.o. 15€</li>
+                                                <li class="alpha">Chivas Regal 21 y.o. 30€</li>
+                                                <li class="alpha">Chivas Regal extra 9€</li>
+                                                <li class="alpha">Cutty Sark 7€</li>
+                                                <li class="alpha">Cutty Sark 12 y.o. 8€</li>
+                                                <li class="alpha">Cutty Sark 15 y.o. 13€</li>
+                                                <li class="alpha">Dewar's 7€</li>
+                                                <li class="alpha">Dewar's 12 y.o. 8€</li>
+                                                <li class="scroll"></li>
+                                                <li class="alpha">Dewar's 18 y.o. 15€</li>
+                                                <li class="alpha">Dimple 8€</li>
+                                                <li class="alpha">Famous Grouse 7€</li>
+                                                <li class="alpha">Famous Grouse Black 8€</li>
+                                                <li class="alpha">Grant's 7€</li>
+                                                <li class="alpha">Grant's 12 y.o. 8€</li>
+                                                <li class="alpha">Haig 7€</li>
+                                                <li class="alpha">J&B 7€</li>
+                                                <li class="alpha">Johnnie Walker Red Label 7€</li>                                                                                                                     
+                                                <li class="alpha">Johnnie Walker Black Label 8€</li>                                                                                                                     
+                                                <li class="alpha">Johnnie Walker Blender's Batch 8€</li>                                                                                                                     
+                                                <li class="alpha">Johnnie Walker Double Black 9€</li>
+                                                <li class="alpha">Johnnie Walker Green Label 15 y.o. 13€</li>
+                                                <li class="alpha">Johnnie Walker Gold Label 18 y.o. 15€</li>                                                                                                                     
+                                                <li class="alpha">Johnnie Walker Blue Label 35€</li>                                                                                                                     
+                                                <li class="alpha">King George Johnnie Walker 75€</li>                                                                                                 
+                                                <li class="alpha">Label 5 7€</li>                                                                                                 
+                                                <li class="alpha">Teacher's 7€</li>                                                                                                 
+                                                <li class="alpha">White Horse 7€</li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown demarcation"><a href="#">Single Grain <i class="fas fa-angle-down"></i></a>
+                                            <ul>
+                                                <li class="alpha">Haig Club 12€</li>
+                                            </ul>
+                                        </li>    
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Irish <i class="fas fa-angle-right"></i></a>
+                                    <ul>                                            
+                                        <li class="alpha">Bushmills 8 y.o. 8€</li>
+                                        <li class="alpha">Bushmills black 8€</li>
+                                        <li class="alpha">Bushmills 10 y.o. 9€</li>
+                                        <li class="alpha">Bushmills 21 y.o. 25€</li>
+                                        <li class="alpha">Jameson 7€</li>
+                                        <li class="alpha">Jameson 12 y.o. 8€</li>
+                                        <li class="alpha">Jameson Black Barrel 8€</li>
+                                        <li class="alpha">Jameson Caskmates 8€</li>
+                                        <li class="alpha">Redbreast 12 y.o. 9€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                        <li class="alpha">Teeling 9€</li>
+                                        <li class="alpha">Tullamore Dew 8€</li>
+                                        <li class="alpha">Tullamore Dew 12 y.o. 9€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Tennessee <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">George Dickel 10€</li>
+                                        <li class="alpha">Jack Daniel's 8€</li>
+                                        <li class="alpha">Jack Daniel's Gentleman 9€</li>
+                                        <li class="alpha">Jack Daniel's Honey 8€</li>
+                                        <li class="alpha">Jack Daniel's Single Barrel 9€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Canadian <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Canadian Club 7€</li>
+                                        <li class="alpha">Canadian Club 12 y.o. 8€</li>
+                                        <li class="alpha">Seagram's V.O. 8€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Japanese <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Nikka 12€</li>
+                                        <li class="alpha">Nikka Days 10€</li>
+                                        <li class="alpha">Suntory 10€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Bourbon <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Forester 10€</li>
+                                        <li class="alpha">Four Roses 7€</li>
+                                        <li class="alpha">Jim Beam 7€</li>
+                                        <li class="alpha">Maker's Mark 10€</li>
+                                        <li class="alpha">Wild Turkey 7€</li>
+                                        <li class="alpha">Wild Turkey 81 7€</li>
+                                        <li class="alpha">Woodford Reserve (Kentucky) 9€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Rye <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Jim Beam Rye 8€</li>
+                                        <li class="alpha">Knob Creek 10€</li> 
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Vodka <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#">Plain <i class="fas fa-angle-right"></i></a>
+                                    <ul class="scrolldown_495" id="scrollwindow12">
+                                        <li class="fix_500"></li>
+                                        <li class="alpha">Absolut 7€</li>
+                                        <li class="alpha">Absolut 100 9€</li>
+                                        <li class="alpha">Absolut Elyx 10€</li>
+                                        <li class="alpha">Below 42 12€</li>
+                                        <li class="alpha">Beluga 13€</li>
+                                        <li class="alpha">Belvedere 12€</li>
+                                        <li class="alpha">Chase RHUBARB 13€</li>
+                                        <li class="alpha">Grey Goose 12€</li>
+                                        <li class="alpha">Ketel One 12€</li>
+                                        <li class="alpha">Legend Of Cremlin 12€</li>
+                                        <li class="scroll"></li>
+                                        <li class="alpha">Smirnoff Black 8€</li>
+                                        <li class="alpha">Stolichnaya 7€</li>
+                                        <li class="alpha">Wyborowa Exquisite 12€</li>
+                                        <li class="alpha">Beluga 700ml 130€</li>
+                                        <li class="alpha">Belvedere 700ml 120€</li>
+                                        <li class="alpha">Grey Goose 700ml 120€</li>
+                                        <li class="alpha">Belvedere 1750ml 300€</li>
+                                        <li class="alpha">Grey Goose 1500ml 300€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Flavoured <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Smirnoff North 7€</li>
+                                        <li class="alpha">Ursus 7€</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Gin <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#">London Dry <i class="fas fa-angle-right"></i></a>
+                                    <ul class="scrolldown_500" id="scrollwindow15">
+                                        <li class="fix_505"></li>
+                                        <li class="alpha">Beefeater 7€</li>
+                                        <li class="alpha">Beefeater 24 10€</li>
+                                        <li class="alpha">Beefeater Burrough's Reserve 12€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                        <li class="alpha">Bombay 7€</li>
+                                        <li class="alpha">Boodles 10€</li>
+                                        <li class="alpha">Brocker's 10€</li>
+                                        <li class="alpha">Bull Dog 9€</li>
+                                        <li class="alpha">Greenall's 10€</li>
+                                        <li class="scroll"></li>
+                                        <li class="alpha">Tanqueray 7€</li>
+                                        <li class="alpha">Tanqueray Ten 9€</li>
+                                        <li class="alpha">William's GB 10€</li>    
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">World Dry <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Botega 10€</li>
+                                        <li class="alpha">Hendrick's 9€</li>
+                                        <li class="alpha">MONKEY 47 10€</li>
+                                        <li class="alpha">Plymouth 8€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Flavoured <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Beefeater Pink 8€</li>
+                                        <li class="alpha">Bosford Pink 8€</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Tequila <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#">Anejo <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Centenario 10€</li>
+                                        <li class="alpha">Don Julio 10€</li>
+                                        <li class="alpha">Jose Cuervo Black Medallion 8€</li>
+                                        <li class="alpha">Patron 10€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Blanco <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Don Julio 10€</li>
+                                        <li class="alpha">Jimador 7€</li>
+                                        <li class="alpha">Jose Cuervo Platino 10€</li>
+                                        <li class="alpha">Olmega Altos 9€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Reposado <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Centenario 10€</li>
+                                        <li class="alpha">Don Agustin 10€</li>
+                                        <li class="alpha">Don Julio 10€</li>
+                                        <li class="alpha">Herradura 8€</li>
+                                        <li class="alpha">Jimador 7€</li>
+                                        <li class="alpha">Olmega Tezon Gold 10€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Flavoured <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Del Maguey Vida Mezcal 12€</li>
+                                        <li class="alpha">Olmega Hibiscus 7€</li> 
+                                        <li class="alpha">Olmega Chocolate 7€</li>  
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Rum <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="#">White <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Bacardi 7€</li>
+                                        <li class="alpha">Havana 3 YO 7€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Golden <i class="fas fa-angle-right"></i></a>
+                                    <ul class="scrolldown_442" id="scrollwindow13">
+                                        <li class="fix_447"></li>
+                                        <li class="alpha">Bacardi 8 YO 8€</li>
+                                        <li class="alpha">Clement 9€</li>
+                                        <li class="alpha">Diplomatico Mantuano 9€</li>
+                                        <li class="alpha">Diplomatico Reserva Exclusiva 10€</li>
+                                        <li class="alpha">Don Papa 10€</li>
+                                        <li class="alpha">Doorly's 9€</li>
+                                        <li class="alpha">El Dorado 9€</li>
+                                        <li class="alpha">Havana Reserva 7 YO 8€</li>
+                                        <li class="scroll"></li>
+                                        <li class="alpha">Havana Selection 12€</li>
+                                        <li class="alpha">Mount Gay 9€</li>
+                                        <li class="alpha">Pampero Aniversario 10€</li>
+                                        <li class="alpha">Plantation Barbados 9€</li>
+                                        <li class="alpha">Plantation Jamaica 9€</li>
+                                        <li class="alpha">Ron Zacapa 10€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Dark <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Gosling 9€</li>
+                                        <li class="alpha">Pacto Navio 10€</li>
+                                        <li class="alpha">Plantation Double 8€</li>
+                                        <li class="alpha">Ron Barcelo 9€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Spiced <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Captain Morgan Black Spiced 8€</li>
+                                        <li class="alpha">Colombiana Negro 8€</li>
+                                        <li class="alpha">Sailor Jerry 8€</li>
+                                        <li class="alpha">Sailor Jerry Exclusiva 9€</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Premium <i class="fas fa-angle-right"></i></a>
+                                    <ul>
+                                        <li class="alpha">Zacapa X.O. 15€</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Liquor - Cherry <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">Baileys 7€</li>
+                                <li class="alpha">Benedectine 7€</li>
+                                <li class="alpha">Cherry EOLIKI 7€</li>
+                                <li class="alpha">Cointreau 7€</li>
+                                <li class="alpha">Crème de Cassis  7€</li>
+                                <li class="alpha">Disaronno Amaretto 7€</li>
+                                <li class="alpha">Drambuie 8€</li>
+                                <li class="alpha">Grand Marnier 7€</li>
+                                <li class="alpha">Kahlua 7€</li>
+                                <li class="alpha">Malibu 7€</li>
+                                <li class="alpha">Mozart 7€</li>
+                                <li class="alpha">Peter Heering 7€</li>
+                                <li class="alpha">Tia Maria 7€</li>
+                                <li class="alpha">Triple Sec EOLIKI 7€</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Brandy - Cognac <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">Courvoisier V.S. 10€</li>
+                                <li class="alpha">Courvoisier V.S.O.P. 12€</li>
+                                <li class="alpha">Hennessy V.S. 10€</li>
+                                <li class="alpha">Metaxa 3old 6€</li>
+                                <li class="alpha">Metaxa 5old 7€</li>
+                                <li class="alpha">Napoleon 8€</li>
+                                <li class="alpha">Remy Martin V.S. 10€</li>
+                                <li class="alpha">Remy Martin V.S.O.P. 12€</li>
+                                <li class="alpha">Martell V.S.O.P. 10€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                <li class="alpha">Armagnac Sempe Larressingle V.S.O.P. 13€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                <li class="alpha">Calvados Boulard Pays d' Auge V.S.O.P. 12€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Aperitif - Vermouth <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">Ούζο (ΜΙΝΙ - ΦΗΜΗ - ΛΕΣΒΟΣ) 4€</li> 
+                                <li class="alpha">Τσίπουρο (με και χωρίς γλυκάνισο) 4€</li>
+                                <li class="alpha">Τσίπουρο Παλαιωμένο (με και χωρίς γλυκάνισο) 5€<hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                <li class="alpha">Aperol 7€</li>
+                                <li class="alpha">Campari 7€</li>
+                                <li class="alpha">Lillet White 7€</li>
+                                <li class="alpha">Lillet Rose 7€</li>
+                                <li class="alpha">Martini Bianco 7€</li>
+                                <li class="alpha">Martini Rossato 7€</li>
+                                <li class="alpha">Martini Vermouth Rosso 7€</li>
+                                <li class="alpha">Pimm's 7€</li>
+                                <li class="alpha">Porto Sandeman 7€</li>
+                                <li class="alpha">Sambuca Ramazzotti 7€</li>
+                                <li class="alpha">Sambuca Ramazzotti Black 8€</li>
+                                <li class="alpha">Ramazotti Aperitivo Rosato 7€</li>
+                                <li class="alpha">Rosso Antico 7€</li>
+                                <li class="alpha">ROOTS DIVINO BIANCO 7€<hr><p class="lang" id="free">Alcohol Free</p><hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                <li class="alpha">ROOTS DIVINO ROSSO 7€<hr><p class="lang" id="free">Alcohol Free</p><hr><p class="lang" id="ask">* In consultation with the service.</p></li>
+                                <li class="alpha">Vermouth 6.50€</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Digestifs <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">ROOTS MASTIC 6.50€</li>
+                                <li class="alpha">ROOTS RAKOMELO 6.50€</li>
+                                <li class="alpha">ROOTS DICTAMO 6.50€</li>
+                                <li class="alpha">Averna 7€</li>
+                                <li class="alpha">Benedictine 7€</li>
+                                <li class="alpha">Grappa 7€</li>
+                                <li class="alpha">Limoncello 7€</li>
+                                <li class="alpha">Unicum 8€</li>
+                                <li class="alpha">Absinth Xenta 10€</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" id="btn-3-1"><i class="fas fa-glass-martini"></i> Cocktails <i class="fas fa-angle-down"></i></a>
+                    <ul>
+                        <li class="dropdown demarcation"><a href="#">Classic <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">Boulevardier 8.50€<br><hr><p>Rye whiskey, Campari bitter, Martini Rosso.</p></li>
+                                <li class="alpha">Cosmopolitan 8€</li>
+                                <li class="alpha">Cuba Libre 8€</li>
+                                <li class="alpha">Daiquiri (classic) 8€<br><hr><p>Flavours: Strawberry, Passion, Coconut, Red Berries.</p></li>
+                                <li class="alpha">Dry Martini 7.50€</li>
+                                <li class="alpha">Mai Tai 8€</li>
+                                <li class="alpha">Manhatan 8€</li>
+                                <li class="alpha">Martinez 8.50€<br><hr><p>Beefeater, vermouth, maraschino liqueur, angostura bitters.</p></li>
+                                <li class="alpha">Mojito 8€</li>
+                                <li class="alpha">Negroni 8.50€</li>
+                                <li class="alpha">Old Fashion 8€</li>
+                                <li class="alpha">Paloma 8€</li>
+                                <li class="alpha">Sour 8€<br><hr><p>Whiskey / Tequila / Rum / Brandy.</p></li>
+                                <li class="alpha">Tommy's Margarita 8€</li>
+                                <li class="alpha">Zombie 8.50€</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Signatures <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">Amanda 8.50€<br><hr><p>Beefeater 24, lemon juice, tangerine purees, sugar syrop, fresh ginger.</p></li>
+                                <li class="alpha">Moana 8.50€<br><hr><p>Absolut Vodka, mango pure, fresh lime, tonka syrup, peach bitters</p></li>
+                                <li class="alpha">ELYXήριο 8.50€<br><hr><p>Absolut ELYX, ginger syrup, green tabasco, passion fruit, lemon juice, aromatic bitters.</p></li>
+                                <li class="alpha">Mystic Forest 8.50€<br><hr><p>Havana 7YO, forest fruits, cherry liqueur, orange juice, lime, simple syrup.</p></li>
+                                <li class="alpha">Love Summer 8.50€<br><hr><p>Havana anejo 7anos, pineapple, white chocolate syrup, butterscotch syrop, lime juice.</p></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Spritz <i class="fas fa-angle-down"></i></a>
+                            <ul>
+                                <li class="alpha">Aperol Spritz 7€<br><hr><p>Prosecco, Aperol, soda.</p></li>
+                                <li class="alpha">Bubble 75 8.50€<br><hr><p>Beefeater 24, lime juice, simple syrup, Pink Brut Prosecco.</p></li>
+                                <li class="alpha">Campari Spritz 7€<br><hr><p>Campari, d'Asti, soda.</p></li>
+                                <li class="alpha">Mediterranεan Spritz 8.50€<br><hr><p>Beefeater, greek sparling wine, suze, ederflower, blue curacao.</p></li>
+                                <li class="alpha">Tokyo 8.50€<br><hr><p>Absolut ELYX, Sake, Yuzu, lime juice, pink grapefruit soda.</p></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Hot <i class="fas fa-angle-down"></i><br><hr><p class="lang" id="winter">* Only winter! </p></a>
+                            <ul>
+                                <li class="alpha">Blue Blazer 8€<br><hr><p>Four Roses bourbon, spice syrup</p></li>
+                                <li class="alpha">Chalet 8.50€<br><hr><p>Metaxa 5 old, Tia Maria, Cointreau, orange curacao,choco bitters</p></li>
+                                <li class="alpha">Honey Roses 8€<br><hr><p>Roots Ρακόμελο, αστεροειδής γλυκάνισος, ροδόνερο</p></li>
+                                <li class="alpha">Irish Winter 8.50€<br><hr><p>Jameson Black Barrel, σιρόπι σφενδάμου, orange bitters</p></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown demarcation"><a href="#">Virgin Cocktails <i class="fas fa-angle-down"></i> (alcohol free) </a>
+                            <ul>
+                                <li class="alpha">Carousel 6.50€<br><hr><p><abbr class="lang" id="cocktail_1">Cotton candy, strawberry syrup, sparkling water</abbr></p></li>
+                                <li class="alpha">Virgin Colada 6.50€<br><hr><p><abbr class="lang" id="cocktail_2">Fresh pineapple, coconut milk</abbr></p></li>
+                                <li class="alpha">Paradise 6.50€<br><hr><p><abbr class="lang" id="cocktail_3">Passion fruit, cranberry, fresh lemon juice, soda</abbr></p></li>
+                            </ul>
+                        </li>
+                        <li class="price">*<abbr class="lang" id="away">All cocktails are also available at TAKE AWAY 5€ </abbr></li>
+                    </ul>
+                </li>
+            </ul>
+        </div> 
+        <div class="footer">
+            <h4 class="text">
+                Follow us / Let us be Social
+                <a href="https://www.facebook.com/SketchSocialCafeBar" target="_blank"><i class="fab fa-facebook face"></i></a>
+                <a href="https://www.instagram.com/sketch_social_cafe_bar/" target="_blank"><i class="fab fa-instagram insta"></i></a>
+            </h4>
+        </div>
+        <script>
+            $('.dropdown > a').click(function(){
+                $(this).parent().siblings().find('ul').fadeOut(500);
+                $(this).next('ul').stop(true, false, true).fadeToggle(500);
+                 return false;
+          });
+        </script>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow2"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow3"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow4"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow5"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow6"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow7"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow8"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow9"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow10"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow11"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow12"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow13"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow14"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow15"
+                }
+            })
+            gsap.to(".scroll", {
+                opacity: -5,
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: 5,
+                    toggleActions: "play none none reset",
+                    scroller: "#scrollwindow16"
+                }
+            })
+        </script>
+        <script>
+            let btn1 = document.querySelector('#btn-1');
+            let btn2 = document.querySelector('#btn-2');
+            let btn3 = document.querySelector('#btn-3');
+            let btn31 = document.querySelector('#btn-3-1');
+            let btn0 = document.querySelector('#btn-0');
+            let btn01 = document.querySelector('#btn-0-1');
+            let btn02 = document.querySelector('#btn-0-2');
+            let btn03 = document.querySelector('#btn-0-3');
+            btn1.addEventListener('click', ()=>{
+                document.body.style.backgroundImage = "url('images/dimelloweb.webp')"
+            });
+            btn2.addEventListener('click', ()=>{
+                document.body.style.backgroundImage = "url('images/heinekenweb.webp')"
+            });
+            btn3.addEventListener('click', ()=>{
+                document.body.style.backgroundImage = "url('images/havanaweb.webp')"
+            });
+            btn31.addEventListener('click', ()=>{
+                document.body.style.backgroundImage = "url('images/havanaweb.webp')"
+            });
+            btn0.addEventListener('click', ()=>{
+                document.body.style.backgroundImage = "url('images/fridaweb.webp')"
+            });
+            btn01.addEventListener('click', ()=>{
+                document.body.style.backgroundImage = "url('images/monbanaweb.webp')"
+            });
+            btn02.addEventListener('click', ()=>{
+                document.body.style.backgroundImage = "url('images/fridaweb.webp')"
+            });
+            btn03.addEventListener('click', ()=>{
+                document.body.style.backgroundImage = "url('images/fridaweb.webp')"
+            });
+        </script>
+    </body>
+</html>

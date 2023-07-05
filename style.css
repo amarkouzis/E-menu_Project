@@ -1,0 +1,602 @@
+@media screen and (min-width: 767px){
+    html{
+        height: 100%;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        background: black;
+        background-image: url('./images/Sala.JPG');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        animation: slideBg 25s ease-in-out infinite alternate;
+    }
+
+    @keyframes slideBg{
+        0%{
+            background-image: url('./images/Sala.JPG');
+        }
+        20%{
+            background-image: url('./images/Sketch_Bar_2.JPG');
+        }
+        40%{
+            background-image: url('./images/Sketch_Bar_3.JPG');
+        }
+        60%{
+            background-image: url('./images/Sketch_Bar_4.JPG');
+        }
+        80%{
+            background-image: url('./images/Sketch_Bar_5.JPG');
+        }
+        100%{
+            background-image: url('./images/Sketch_Bar_1.JPG');
+        }
+    }
+    
+    .dropdown{
+        display: block;
+        text-decoration: none;
+        font-size: 20px;
+        cursor: default;
+        font-family: Times New Roman;
+        border: none;
+        outline: none;
+        background: none;
+        margin: 0;
+        padding: 0px;                                           
+        transition: 0.7s;
+    }
+    
+    .nav-area > li{                                 /* Αναφέρεται στα εξωτερικά κουμπιά */
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .nav-area > li > ul{                            /* Αναφέρεται στα 1α κουμπιά */
+        text-align: center;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 99999;
+        width: 240px;
+    }
+    .translate img{
+        float: right;
+        margin-right: 25px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .summer{
+        font-size: 20px;
+    }
+    .kind{
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    .dropdown a{
+        font-size: 20px;
+    }
+    .demarcation_1{
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    .alpha{
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .footer{
+        position: fixed;
+    }
+}
+
+@media screen and (max-width: 767px){
+    html{
+        height: 100%;
+    }
+    body{   
+        margin: 0;
+        padding: 0;
+        font-family: poppins;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-image: url('./images/frida.jpg');
+        min-height: 100%;
+    }
+    
+    .dropdown {
+        width: 100%;
+        top: 20px;
+        text-align: center;
+        transition: all 0.5s;
+        cursor: default;
+        font-family: Times New Roman;
+    }
+    .nav-area li {
+        display: block;
+        top: 100%;
+    }
+
+    .nav-area > li{
+        display: block;
+        bottom: 100%;
+        top: 100%;
+        opacity: 82%;
+    }
+    .nav-area > li > ul{                            /* Αναφέρεται στο 1ο περιεχόμενο των κουμπιών */
+        text-align: center;
+        display: none;
+        position: relative;
+        top: 100%;
+        left: 0;
+        width: 50%;
+        z-index: 99999;
+    }
+    .nav-area li a{
+        font-size: 16px;
+    }
+    
+    .dropdown > ul > li > a{
+        font-size: 16px;
+    }
+    
+    .translate img{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        float: right;
+        padding-right: 15px;
+    }
+    .summer{
+        font-size: 16px;
+    }
+    .kind{
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    .dropdown a{
+        font-size: 16px;
+    }
+    .demarcation_1{
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    .alpha{
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    .scrolldown_655{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 655px; 
+    }
+    .fix_660{
+        margin-top: -660px;
+    }
+    .scrolldown_500{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 498px; 
+    }
+    .fix_505{
+        margin-top: -503px;
+    }
+    .scrolldown_495{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 495px; 
+    }
+    .fix_500{
+        margin-top: -500px;
+    }
+    .scrolldown_442{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 440px; 
+    }
+    .fix_447{
+        margin-top: -445px;
+    }
+    .scrolldown_330{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 330px; 
+    }
+    .fix_335{
+        margin-top: -335px;
+    }
+    .scrolldown_305{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 305px; 
+    }
+    .fix_310{
+        margin-top: -310px;
+    }
+    .scrolldown_275{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 275px; 
+    }
+    .fix_280{
+        margin-top: -280px;
+    }
+    .scrolldown_270{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 270px; 
+    }
+    .fix_275{
+        margin-top: -275px;
+    }
+    .scrolldown_252{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 251px; 
+    }
+    .fix_257{
+        margin-top: -256px;
+    }
+    .scrolldown_217{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 217px; 
+    }
+    .fix_222{
+        margin-top: -222px;
+    }
+    .scrolldown_165{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 165px; 
+    }
+    .fix_170{
+        margin-top: -170px;
+    }
+    .scrolldown_105{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 108px; 
+    }
+    .fix_110{
+        margin-top: -113px;
+    }
+    .scrolldown_110{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 110px; 
+    }
+    .fix_115{
+        margin-top: -115px;
+    }
+    .scrolldown_60{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 90px; 
+    }
+    .fix_65{
+        margin-top: -95px;
+    }
+    .fixtop{
+        top: -112px !important;
+    }
+    .fixtop2{
+        top: -99px !important;
+    }
+    .fixtop3{
+        top: -104px !important;
+    }
+    .scroll{
+        height: 30px;
+        width: 20px;
+        left: 80%;
+        position: absolute;
+        border-radius: 50px;
+        margin-bottom: -35px;
+        z-index: 999999999;
+    }
+    .scroll::before,
+    .scroll::after{
+        content: '';
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        border: 2px solid white;
+        height: 8px;
+        width: 8px;
+        transform: translate(-50%, -100%) rotate(45deg);
+        border-top: transparent;
+        border-left: transparent;
+        animation: scroll 1s ease-in-out infinite;
+    }
+    .scroll::after{
+        top: 30%;
+        animation-delay: .3s;
+    }
+    .some{
+        text-align: center;
+        display: none;
+        position: absolute;
+        top: -35px !important;
+        left: 100%;
+        z-index: 9999999;
+        width: 100%;
+        background: none;
+    }
+    @keyframes scroll {
+        0%{
+            opacity: 0;
+        }
+        30%{
+            opacity: 1;
+        }
+        60%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            top: 90%;
+        }
+    }
+}
+
+.dropdown a{
+    padding: 14px 17px;
+    display: block;
+    text-decoration: none;
+    color: goldenrod;
+    cursor: default;
+    font-family: Times New Roman;
+    border: none;
+    outline: none;
+    background-color: black;
+    transition: 0.7s;
+}
+
+.dropdown ul li{
+    padding-top: 5px;                           
+} 
+
+.nav-area{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-area ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-area li{
+    position: relative;
+}
+
+.nav-area > li > ul > li > ul{                  /* Αναφέρεται στα 2α κουμπιά */
+    text-align: center;
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    background: none;
+}
+
+.nav-area > li > ul > li > ul > li > ul{        /*Αναφέρεται στα 3α κουμπιά */ 
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 9999999;
+    width: 100%;
+    background: none;
+}
+
+.nav-area > li > ul > li > ul > li > ul > li > ul{        /*Αναφέρεται στα 4α κουμπιά */
+    text-align: center;
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    z-index: 99999999;
+    width: 100%;
+    background: none;
+}
+
+.dropdown > a:hover{                              /* Αναφέρεται στο hover όλων */
+    background-color: darkred;
+    box-shadow: 0 0 5px darkred,
+                0 0 25px darkred,
+                0 0 50px darkred,
+                0 0 200px darkred;
+    cursor: pointer;
+}
+    
+.bar{
+    height: 100%;
+    background: black;
+    background-image: url('./images/Sketch_Logo.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 20px 0px;
+    background-size: 176px 95px;
+    padding-left: 200px;
+    padding-top: 30px;
+    line-height: 40px;
+}
+
+.bar .logo{ 
+    color: goldenrod;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Times New Roman;
+    position: relative;
+}
+
+.wrapper{
+    text-align: center;
+    width: 100%;
+    font-family: Times New Roman;
+    padding-top: 5px;                                  
+    padding-bottom: 60px;
+}
+    
+.kind{                                        /* Αναφέρεται στα είδη της μπύρας */
+    color: goldenrod;
+    padding: 14px 17px;
+    display: block;
+    text-decoration: none;
+    cursor: default;
+    font-family: Times New Roman;
+    outline: none;
+    transition: 0.7s;
+    border-bottom: outset;
+    border-width: 3px;
+    border-bottom-color: goldenrod;
+    border-radius: 30pt 3pt;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid goldenrod;
+    background-color: #600000;
+}
+
+.price{                                        /* Αναφέρεται στη μισή ποσότητα των platters */
+    padding: 14px 17px;
+    display: block;
+    text-decoration: none;
+    cursor: default;
+    font-family: Times New Roman;
+    outline: none;
+    transition: 0.7s;
+    border-bottom: outset;
+    border-width: 3px;
+    border-bottom-color: goldenrod;
+    border-radius: 30pt 3pt;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid goldenrod;
+    background-color: #600000;
+}
+
+.summer{
+    padding: 14px 17px;
+    display: block;
+    text-decoration: none;
+    cursor: default;
+    font-family: Times New Roman;
+    outline: none;
+    transition: 0.7s;
+    border-bottom: outset;
+    border-width: 3px;
+    border-bottom-color: goldenrod;
+    border-radius: 30pt 3pt;
+    margin-top: 4px;
+    background-color: #333333;
+    color: lightgray;
+}
+.summer_1 > a{
+    background-color: #333333;
+    color: lightgray;
+}
+.nav-area a{
+    border-bottom: outset;
+    border-width: 3px;
+    border-bottom-color: goldenrod;
+    border-radius: 30pt 3pt;
+}
+
+.demarcation > a {
+    text-align: center;
+    border-top: outset;
+    border-top-width: 2px;
+    border-top-color: whitesmoke;
+}
+
+.demarcation_1 {
+    padding: 14px 17px;
+    display: block;
+    text-decoration: none;
+    cursor: default;
+    font-family: Times New Roman;
+    outline: none;
+    transition: 0.7s;
+    border-bottom: outset;
+    border-width: 3px;
+    border-bottom-color: goldenrod;
+    border-radius: 30pt 3pt;
+    background: black;
+    color: goldenrod;
+    text-align: center;
+    border-top: outset;
+    border-top-width: 2px;
+    border-top-color: whitesmoke;
+}
+
+.dropdown p{
+    text-align:left;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.alpha{
+    padding: 14px 17px;
+    display: block;
+    text-decoration: none;
+    color: goldenrod;
+    cursor: default;
+    font-family: Times New Roman;
+    outline: none;
+    background-color: black;
+    transition: 0.7s;
+    border-bottom: outset;
+    border-width: 3px;
+    border-bottom-color: goldenrod;
+    border-radius: 30pt 3pt;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color:black;
+    color: white;
+    text-align: center;
+    padding-top: -15px;
+    padding-bottom: 10px;
+    margin-top: auto;
+}
+.footer .text{
+    margin-top: 7px;
+    color: goldenrod;
+}
+.footer h4 i{
+    color: goldenrod;
+}
+.footer .face{
+    color:#3b5999;
+    font-size: 23px;
+    margin-left: 12px;   
+}
+.footer .insta{
+    font-size: 23px;
+    margin-left: 12px;
+    color: #e4405f;
+}
